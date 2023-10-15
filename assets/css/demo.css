@@ -127,3 +127,18 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+/* Alhula */
+
+.app-brand-logo.demo img{
+  width: 100%;
+}
+
+.app-brand-text.demo {
+  position: relative;
+  width: 135px;
+}
+
+.app-brand-text.demo img{
+  width: 100%;
+}
