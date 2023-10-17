@@ -142,3 +142,39 @@
 .app-brand-text.demo img{
   width: 100%;
 }
+
+
+
+/***/
+
+.stretch-group-h {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.stretch-group-h .stretch-side{
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.stretch-group-v {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  height: 100%;
+}
+
+.stretch-group-v .stretch-side{
+  position: relative;
+  flex: 1 1 auto;
+  height: 1%;
+  min-height: 0;
+}
+
+/***/

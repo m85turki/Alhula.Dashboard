@@ -171,7 +171,7 @@
           enabled: false
         }
       },
-      labels: ['UI Design', 'UX Design', 'Music', 'Animation', 'React', 'SEO'],
+      labels: ['التجويد', 'التفسير', 'الإتقان', 'الحضور', 'الحفظ', 'الإلتزام'],
       series: [
         {
           data: [35, 20, 14, 12, 10, 9]
