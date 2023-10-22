@@ -184,3 +184,21 @@
   border-bottom: 1px solid #dbdade;
   backdrop-filter: saturate(200%) blur(6px);
 }
+
+.number-unicode {
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+
+.number-unicode div{
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+
+.number-unicode div, 
+.number-unicode div span, 
+.number-unicode div small
+{
+  unicode-bidi: plaintext;
+  text-align: right;
+}
