@@ -202,3 +202,7 @@
   unicode-bidi: plaintext;
   text-align: right;
 }
+
+.offcanvas.offcanvas-end {
+  width: 600px;
+}
