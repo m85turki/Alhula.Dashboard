@@ -76,8 +76,6 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="./assets/js/config.js"></script>
-  </head>
-
   <body>
 
     <!-- Layout wrapper -->
@@ -849,7 +847,7 @@
                       </div>
                     </div>
 
-                    <div class="card-header sticky-element bg-label-secondary">
+                    <div class="card-header sticky-element bg-label-secondary z-6 position-relative">
                       
                       <div class="row g-4 justify-content-sm-between align-items-sm-end">
 
@@ -857,47 +855,51 @@
                         <h6 class="card-title mb-2 me-2">البحث والفلتره</h6>
                           <div class="row g-3 gap-md-0 align-items-center">
                             <div class="col-12 col-md-6">
-                              <input type="text" id="" class="form-control" placeholder="بحث..." />
+                              <input type="text" id="searchInput" class="form-control" placeholder="بحث...">
                             </div>
                             
                             <div class="col-12 col-sm-6 col-md-3">
-                              <select id="" class="selectpicker w-100" data-style="btn-default"
+                              <select  id="filterType" class="selectpicker w-100" data-style="btn-default"
                               multiple
                               placeholder="نوع الحلقة">
-                                <option>حلقة التأسيس الأولى</option>
-                                <option>حلقة التأسيس الثانية</option>
+                              <option value="">الكل</option>
+                              <option value="حلقة التأسيس">حلقة التأسيس</option>
+                              <!-- إضافة المزيد من الخيارات حسب احتياجك -->
                               </select>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3">
-                              <select id="" class="selectpicker w-100" data-style="btn-default"
+                              <select id="filterStatus" class="selectpicker w-100" data-style="btn-default"
                               multiple
                               placeholder="الحالة">
-                                <option>فعال</option>
-                                <option>مكتمل</option>
-                                <option>مجدول</option>
-                                <option>قيد الإنتظار</option>
+                              <option value="فعال">فعال</option>
+                              <option value="مكتمل">مكتمل</option>
+                              <option value="مجدول">مجدول</option>
+                              <option value="قيد الإنتظار">قيد الإنتظار</option>
                               </select>
                             </div>
                           </div>
                       </div>
                       <div class="col-auto">
-                        <select id="" class="selectpicker w-100" data-style="btn-default">
-                          <option>10</option>
-                          <option>30</option>
+                        <select t id="table-length-select" class="selectpicker w-100" data-style="btn-default">
+                          <option value="10">10</option>
+                          <option value="25">25</option>
+                          <option value="50">50</option>
+                          <option value="100">100</option>
                         </select>
                       </div>
 
                     </div>
                   </div>
 
-                    <div class="row">
+                    <div class="row z-1 position-relative">
                       <div class="col-12">
                         <!-- Account -->
                         <div class="card-body">
                           
 
                           <div class="table-responsive tbl-responsive">
-                            <table id="exampleDT" class="table table-hover">
+
+                            <table  class="example-dt table table-hover datatables-basic">
                               <thead>
                                 <tr>
                                   <th>الاسم بالكامل</th>
@@ -921,7 +923,7 @@
                                       </div>
                                       <div class="d-flex flex-column name-mw">
                                         <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
+                                          <span class="fw-medium">أحمد عيسى الفيلكاوي</span>
                                         </a>
                                         <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
                                       </div>
@@ -1168,6 +1170,7 @@
                                 </tr>
                               </tbody>
                             </table>
+
                           </div>
 
                          
@@ -1443,20 +1446,100 @@
         <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
         <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
-<script>
-  new DataTable('#exampleDT');
-</script>
-    
+      
 
+
+
+
+
+
+
+        <script>
+          $(document).ready(function () {
+            var table = $('.example-dt').DataTable({
+              "language": {
+                "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+                "sInfo": "عرض _START_ إلى _END_ من أصل _TOTAL_ مُدخل",
+                "sInfoEmpty": "عرض 0 إلى 0 من أصل 0 مُدخل",
+                "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "عرض _MENU_ مُدخل",
+                "sLoadingRecords": "جارٍ التحميل...",
+                "sProcessing": "جارٍ المعالجة...",
+                "sSearch": "بحث:",
+                "sZeroRecords": "لم يتم العثور على أية سجلات مطابقة",
+                "oPaginate": {
+                  "sFirst": "الأول",
+                  "sPrevious": "السابق",
+                  "sNext": "التالي",
+                  "sLast": "الأخير"
+                },
+                "oAria": {
+                  "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+                  "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+                },
+
+              },
+              "lengthChange": false, // لإخفاء خيار "Table length"
+              "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]] // خيارات العدد المخصصة
+            });
+
+             // التفاعل مع العنصر الجديد المخصص
+            $('#table-length-select').on('change', function () {
+                var length = $(this).val();
+                table.page.len(length).draw();
+            });
+
+            // إزالة مربع البحث
+            $(".dataTables_filter").hide();
+
+            $('#searchInput').on('keyup', function () {
+              table.search(this.value).draw();
+            });
+
+            /*$('#filterType').on('change', function () {
+              table.column(1).search(this.value).draw();
+            });
+
+            $('#filterStatus').on('change', function () {
+              table.column(2).search(this.value).draw();
+            });*/
+
+
+
+
+
+
+
+
+
+
+
+            // التفاعل مع الفلاتر
+            $('#filterType').on('change', function () {
+              var selectedValues = $('#filterType').val();
+              table.column(1).search(selectedValues.join('|'), true, false).draw();
+            });
+
+            $('#filterStatus').on('change', function () {
+              var selectedValues = $('#filterStatus').val();
+              table.column(2).search(selectedValues.join('|'), true, false).draw();
+            });
+
+
+
+
+
+
+          });
+        </script>
         
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
     <!-- Page JS -->
     <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
-
-        <!-- Page JS -->
-        <script src="./assets/js/tables-datatables-basic.js"></script>
 
 
   </body>
