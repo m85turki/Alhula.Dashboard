@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+
+
+<html
+  lang="ar"
+  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+  dir="rtl"
+  data-theme="theme-default"
+  data-assets-path="./assets/"
+  data-template="vertical-menu-template-no-customizer">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>إدارة المستخدمين</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="./assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="./assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/sweetalert2/sweetalert2.css" />
+
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="./assets/vendor/libs/tagify/tagify.css" />
+        <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+        
+        <link rel="stylesheet" href="./assets/responsive_table_ar.css" />
+        
+    
+
+            <!-- Vendors CSS -->
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/flatpickr/flatpickr.css" />
+    <!-- Row Group CSS -->
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css" />
+    <!-- Form Validation -->
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
+
+    
+   
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="./assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="./assets/js/config.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="./assets/img/branding/logo.png" alt="">
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold">
+                <img src="./assets/img/branding/name.png" alt="">
+              </span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+              <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+              <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- لوحة البيانات -->
+            <li class="menu-item active">
+              <a href="javascript:void(0);" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <div>لوحة البيانات</div>
+              </a>
+            </li>
+
+            <!-- إدارة محتوى الموقع الالكتروني -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-layout-sidebar-right"></i>
+                <div>إدارة محتوى الموقع الالكتروني</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div>ادارة صفحات الموقع</div>
+                  </a>
+
+                  <ul class="menu-sub">
+                  <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link">
+                      <div>أنواع الصفحات وتصنيفاتها</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link">
+                      <div>إدارة الميديا والأخبار</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link">
+                      <div>إدارة النصوص الرئيسية</div>
+                    </a>
+                  </li>
+                  </ul>
+
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div>الإعدادات</div>
+                  </a>
+
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="javascript:void(0);" class="menu-link">
+                        <div>إعدادات الموقع</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="javascript:void(0);" class="menu-link">
+                        <div>بيانات الموقع </div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="javascript:void(0);" class="menu-link">
+                        <div>إعدادات الجنسية</div>
+                      </a>
+                    </li>
+                    </ul>
+  
+                </li>
+
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>المراسلات</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- إدارة حلقات التدريس -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-book"></i>
+                <div>إدارة حلقات التدريس</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>أنواع ومحتوى الحلقات</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>إدارة الحلقات التدريسية</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+                        
+            <!-- إعدادات نظام إدارة الحلة -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-settings"></i>
+                <div>إعدادات نظام إدارة الحلة</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>إدارة الفروع</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>إعدادات نسب العلامات</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>إعدادات إغلاق التسجيل</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>طرق الدفع</div>
+                    <div class="badge bg-danger rounded-pill ms-auto">4</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>حالات اشتراكات الطلاب</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>أنواع النشاطات</div>
+                    <div class="badge bg-primary rounded-pill ms-auto">5</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>مجموعة الحلق التدريسية</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>إعدادات نماذج الشهادات</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>إدارة المدراء الفرعيين</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>قائمة مراكز الحلة</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- إدارة المستخدمين -->
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-users"></i>
+                <div>إدارة المستخدمين</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>قائمة المشرف العام</div>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>قائمة المستخدمين</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>قائمة الطلاب</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- التقارير -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-chart-pie"></i>
+                <div>التقارير</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>تقرير زوار الموقع الالكتروني</div>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>تقرير الطلاب التفصيلي</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link">
+                    <div>شهادات الطلاب</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- الدعم -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">الدعم</span>
+            </li>
+            
+            <li class="menu-item">
+              <a
+                href="javascript:void(0);"
+                target="_blank"
+                class="menu-link">
+                <i class="menu-icon tf-icons ti ti-file-description"></i>
+                <div>المساعدة</div>
+              </a>
+            </li>
+
+                     
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item navbar-search-wrapper mb-0">
+                  <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
+                    <i class="ti ti-search ti-md me-2"></i>
+                    <span class="d-none d-md-inline-block text-muted">البحث</span>
+                  </a>
+                </div>
+              </div>
+              <!-- /Search -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+                <!-- Quick links  -->
+                <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false">
+                    <i class="ti ti-layout-grid-add ti-md"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end py-0">
+                    <div class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h5 class="text-body mb-0 me-auto">إختصارات</h5>
+                        <a
+                          href="javascript:void(0)"
+                          class="dropdown-shortcuts-add text-body"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="إضافة إختصارات"
+                          ><i class="ti ti-sm ti-apps"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="dropdown-shortcuts-list scrollable-container">
+                      
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-users fs-4"></i>
+                          </span>
+                          <a href="app-user-list.html" class="stretched-link">إدارة المستخدمين</a>
+                          <small class="text-muted mb-0">الحسابات</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-lock fs-4"></i>
+                          </span>
+                          <a href="app-access-roles.html" class="stretched-link">إدارة الأدوار</a>
+                          <small class="text-muted mb-0">الصلاحيات</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-chart-bar fs-4"></i>
+                          </span>
+                          <a href="javascript:void(0);" class="stretched-link">تقرير الطلاب</a>
+                          <small class="text-muted mb-0">التفصيلي</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-file-invoice fs-4"></i>
+                          </span>
+                          <a href="app-invoice-list.html" class="stretched-link">الفواتير</a>
+                          <small class="text-muted mb-0">طرق الدفع</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-help fs-4"></i>
+                          </span>
+                          <a href="pages-faq.html" class="stretched-link">الأسئلة الأكثر</a>
+                          <small class="text-muted mb-0">شيوعا</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-square fs-4"></i>
+                          </span>
+                          <a href="modal-examples.html" class="stretched-link">إدارة نماذج الشهادات</a>
+                          <small class="text-muted mb-0">النتائج</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- Quick links -->
+
+                <!-- Notification -->
+                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false">
+                    <i class="ti ti-bell ti-md"></i>
+                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end py-0">
+                    <li class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h5 class="text-body mb-0 me-auto">التنبيهات</h5>
+                        <a
+                          href="javascript:void(0)"
+                          class="dropdown-notifications-all text-body"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Mark all as read"
+                          ><i class="ti ti-mail-opened fs-4"></i
+                        ></a>
+                      </div>
+                    </li>
+                    <li class="dropdown-notifications-list scrollable-container">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">ألف مبروك 🎉</h6>
+                              <p class="mb-0">حصل على الشارة الذهبية لأفضل حافظ شهريا</p>
+                              <small class="text-muted">قبل 1س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-danger">س أ</span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه</h6>
+                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه نص التنبيه </p>
+                              <small class="text-muted">قبل 12س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/3.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">رسالة جديده ✉️</h6>
+                              <p class="mb-0">مختصر عن الرسالة الجديده</p>
+                              <small class="text-muted">قبل 1س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success"
+                                  ><i class="ti ti-shopping-cart"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه 🛒</h6>
+                              <p class="mb-0">نص التنبيه</p>
+                              <small class="text-muted">قبل 8س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/9.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه 🚀</h6>
+                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
+                              <small class="text-muted">قبل 2س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success"
+                                  ><i class="ti ti-chart-pie"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه</h6>
+                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
+                              <small class="text-muted">قبل 5س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/5.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه</h6>
+                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
+                              <small class="text-muted">قبل 5س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/7.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه</h6>
+                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
+                              <small class="text-muted">قبل 5س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-warning"
+                                  ><i class="ti ti-alert-triangle"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">عنوان التنبيه</h6>
+                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
+                              <small class="text-muted">قبل 5س</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu-footer border-top">
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center">
+                        عرض جميع التنبيهات
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Notification -->
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online d-none">
+                      <img src="./assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    </div>
+                    <div class="avatar avatar-online">
+                      <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">محمد تركي</span>
+                            <small class="text-muted">مدير</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">ملفي الشخصي</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">الإعدادات</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-billing.html">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
+                          <span class="flex-grow-1 align-middle">الفواتير</span>
+                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
+                            >2</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">الأسئلة الاكثر شيوعا</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">الأسعار</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">تسجيل الخروج</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper d-none">
+              <input
+                type="text"
+                class="form-control search-input container-xxl border-0"
+                placeholder="البحث..."
+                aria-label="البحث..." />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+            </div>
+          </nav>
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="py-3 mb-2">
+                <span class="text-muted fw-light">إدارة المستخدمين /</span> قائمة المشرف العام</h4>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-4">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0);">
+                        قائمة المشرف العام</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="javascript:void(0);">
+                        قائمة المستخدمين </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="javascript:void(0);">
+                        قائمة الطلاب
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="card mb-4">
+                    <div class="card-header sticky-element bg-label-secondary d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
+                      <h5 class="card-title mb-sm-0 me-2">قائمة المشرف العام</h5>
+                      <div class="action-btns">
+                        <button class="btn btn-primary"
+                        type="button"
+                          data-bs-toggle="offcanvas"
+                          data-bs-target="#offcanvasBoth"
+                          aria-controls="offcanvasBoth">
+                          <i class="ti ti-plus me-1 ti-xs"></i>
+                          إضافة مستخدم جديد
+                        </button>
+
+
+                        
+
+                      </div>
+                    </div>
+
+                    <div class="card-header sticky-element bg-label-secondary">
+                      
+                      <div class="row g-4 justify-content-sm-between align-items-sm-end">
+
+                      <div class="col-12 col-md">
+                        <h6 class="card-title mb-2 me-2">البحث والفلتره</h6>
+                          <div class="row g-3 gap-md-0 align-items-center">
+                            <div class="col-12 col-md-6">
+                              <input type="text" id="" class="form-control" placeholder="بحث..." />
+                            </div>
+                            
+                            <div class="col-12 col-sm-6 col-md-3">
+                              <select id="" class="selectpicker w-100" data-style="btn-default"
+                              multiple
+                              placeholder="نوع الحلقة">
+                                <option>حلقة التأسيس الأولى</option>
+                                <option>حلقة التأسيس الثانية</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                              <select id="" class="selectpicker w-100" data-style="btn-default"
+                              multiple
+                              placeholder="الحالة">
+                                <option>فعال</option>
+                                <option>مكتمل</option>
+                                <option>مجدول</option>
+                                <option>قيد الإنتظار</option>
+                              </select>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                        <select id="" class="selectpicker w-100" data-style="btn-default">
+                          <option>10</option>
+                          <option>30</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <!-- Account -->
+                        <div class="card-body">
+                          
+
+                          <div class="table-responsive tbl-responsive">
+                            <table id="exampleDT" class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th>الاسم بالكامل</th>
+                                  <th>نوع الحلقة</th>
+                                  <th>الحالة</th>
+                                  <th>معلومات التواصل</th>
+                                  <th style="width: 1%;">الاجراءات</th>
+                                </tr>
+                              </thead>
+                              <tbody class="table-border-bottom-0">
+                                <tr>
+                                  <td>
+                                    <div class="d-flex justify-content-start align-items-center user-name">
+                                      <div class="avatar-wrapper">
+                                        <div class="avatar me-3 d-none">
+                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        </div>
+                                        <div class="avatar me-3">
+                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                                        </div>
+                                      </div>
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="app-user-view-account.html" class="text-body">
+                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
+                                        </a>
+                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع الحلقة:
+                                    </spann>
+                                    حلقة التأسيس
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">فعال</span></td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <small class="text-muted">55637033@gmail.com</small>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          +965 97935052
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-edit ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);" >
+                                            عرض
+                                          </a>
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            دعم
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="d-flex justify-content-start align-items-center user-name">
+                                      <div class="avatar-wrapper">
+                                        <div class="avatar me-3 d-none">
+                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        </div>
+                                        <div class="avatar me-3">
+                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                                        </div>
+                                      </div>
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="app-user-view-account.html" class="text-body">
+                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
+                                        </a>
+                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع الحلقة:
+                                    </spann>
+                                    حلقة التأسيس
+                                  </td>
+                                  <td><span class="badge bg-label-success me-1">مكتمل</span></td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <small class="text-muted">55637033@gmail.com</small>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          +965 97935052
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-edit ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);" >
+                                            عرض
+                                          </a>
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            دعم
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="d-flex justify-content-start align-items-center user-name">
+                                      <div class="avatar-wrapper">
+                                        <div class="avatar me-3 d-none">
+                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        </div>
+                                        <div class="avatar me-3">
+                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                                        </div>
+                                      </div>
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="app-user-view-account.html" class="text-body">
+                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
+                                        </a>
+                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع الحلقة:
+                                    </spann>
+                                    حلقة التأسيس
+                                  </td>
+                                  <td><span class="badge bg-label-info me-1">مجدول</span></td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <small class="text-muted">55637033@gmail.com</small>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          +965 97935052
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-edit ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);" >
+                                            عرض
+                                          </a>
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            دعم
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="d-flex justify-content-start align-items-center user-name">
+                                      <div class="avatar-wrapper">
+                                        <div class="avatar me-3 d-none">
+                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        </div>
+                                        <div class="avatar me-3">
+                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                                        </div>
+                                      </div>
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="app-user-view-account.html" class="text-body">
+                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
+                                        </a>
+                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع الحلقة:
+                                    </spann>
+                                    حلقة التأسيس
+                                  </td>
+                                  <td><span class="badge bg-label-warning me-1">قيد الإنتظار</span></td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <small class="text-muted">55637033@gmail.com</small>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          +965 97935052
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-edit ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);" >
+                                            عرض
+                                          </a>
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            دعم
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                         
+          
+                          <div class="pt-4 row g-2 align-items-center">
+
+                            <div class="col">
+                            <nav aria-label="Page navigation">
+                              <ul class="pagination mb-0">
+                                <li class="page-item prev">
+                                  <a class="page-link waves-effect" href="javascript:void(0);">
+                                    <i class="ti ti-chevrons-right ti-xs"></i>
+                                  </a>
+                                </li>
+                                <li class="page-item">
+                                  <a class="page-link waves-effect" href="javascript:void(0);">1</a>
+                                </li>
+                                <li class="page-item">
+                                  <a class="page-link waves-effect" href="javascript:void(0);">2</a>
+                                </li>
+                                <li class="page-item active">
+                                  <a class="page-link waves-effect" href="javascript:void(0);">3</a>
+                                </li>
+                                <li class="page-item">
+                                  <a class="page-link waves-effect" href="javascript:void(0);">4</a>
+                                </li>
+                                <li class="page-item next">
+                                  <a class="page-link waves-effect" href="javascript:void(0);">
+                                    <i class="ti ti-chevrons-left ti-xs"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                          </div>
+                          <div class="col-auto">
+                            <div class="">
+                              <small class="text-muted">
+                                عرض 1 إلى 10 من أصل 50 مدخلاً
+                              </small>
+                            </div>
+                          </div>
+                          </div>
+
+
+                        </div>
+                        <!-- /Account -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Content -->
+
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl">
+                <div
+                  class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                  <div>
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                  </div>
+                  <div class="d-none d-lg-inline-block">
+                    <a href="javascript:void(0);" class="footer-link me-4" target="_blank">الدعم</a>
+                    <a href="javascript:void(0);" class="footer-link me-4" target="_blank" >من نحن</a>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+
+      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+      <div class="drag-target"></div>
+    </div>
+
+    <!-- / Layout wrapper -->
+    
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة مستخدم جديد</h5>
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body vertical-example my-auto mx-0 flex-grow-0">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- 1. Delivery Address -->
+          <h5 class="mb-3">1. نوع العضوية</h5>
+          <div class="row g-3 mb-4">
+            
+            <!-- Basic -->
+           
+            <div class="col-md-6">
+              <label class="form-label" for="">نوع العضوية</label>
+              <select id="" class="selectpicker w-100" data-style="btn-default"
+              placeholder="إختر نوع العضوية">
+                <option>إختر</option>
+                <option>إختر</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="form-label">نوع الحلقة</label>
+              <select
+                id=""
+                class="selectpicker w-100"
+                multiple
+                data-style="btn-default"
+                data-live-search="true"
+                placeholder="حدد نوع الحلقة"
+                >
+                <option>نوع الحلقة-1</option>
+                <option>نوع الحلقة-2</option>
+              </select>
+            </div>
+            <div class="col-md-6 d-flex align-items-end ">
+              <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="" />
+                <label class="form-check-label" for="">فعال</label>
+              </div>
+            </div>
+            <hr>
+
+        </div>
+          <h5 class="mb-3">2. المعلومات الأساسية</h5>
+          <div class="row g-3 mb-4">
+            
+            <!-- Basic -->
+            <div class="col-md-12">
+              <label class="form-label" for="">الإسم الكامل</label>
+              <input type="text" id="" class="form-control" placeholder="الاسم الرباعي" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="">الجنس</label>
+              <select id="" class="selectpicker w-100" data-style="btn-default"
+              placeholder="إختر">
+                <option>ذكر</option>
+                <option>أنثى</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="">البريد الالكتروني</label>
+              <div class="input-group input-group-merge">
+                <input
+                  class="form-control"
+                  type="text"
+                  id=""
+                  name="email"
+                  placeholder="البريد الالكتروني"
+                  aria-label="البريد الالكتروني" />
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="">رقم الهاتف</label>
+              <input
+                type="text"
+                id=""
+                class="form-control phone-mask"
+                placeholder="658 799 8941"
+                aria-label="658 799 8941" />
+            </div>
+            <hr>
+          </div>
+
+          <h5 class="mb-3">3. العنوان</h5>
+            <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <label for="" class="form-label">الدولة</label>
+              <select
+                id=""
+                class="selectpicker w-100"
+                data-style="btn-default"
+                data-live-search="true"
+                placeholder="حدد الدولة">
+                <option>اسم الدولة</option>
+                <option>اسم الدولة</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label for="" class="form-label">المدينة</label>
+              <select
+                id=""
+                class="selectpicker w-100"
+                data-style="btn-default"
+                data-live-search="true"
+                placeholder="إختر المدينة"
+                >
+                <option>اسم المدينة</option>
+                <option>اسم المدينة</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="">العنوان</label>
+              <textarea
+                name="address"
+                class="form-control"
+                id=""
+                rows="2"
+                placeholder="حدد العنوان"></textarea>
+            </div>
+            
+
+
+            <hr>
+            <div class="col-12 action-btns">
+              <button class="btn btn-label-primary me-3 waves-effect">
+                <span class="align-middle">إلغاء</span>
+              </button>
+              <button class="btn btn-primary waves-effect waves-light">حفظ</button>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+
+    <!-- / Offcanvas -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="./assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="./assets/vendor/libs/popper/popper.js"></script>
+    <script src="./assets/vendor/js/bootstrap.js"></script>
+    <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="./assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="./assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="./assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="./assets/vendor/libs/select2/select2.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+    <script src="./assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="./assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="./assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+
+        <!-- Vendors JS -->
+        <script src="./assets/vendor/libs/select2/select2.js"></script>
+        <script src="./assets/vendor/libs/tagify/tagify.js"></script>
+        <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+        <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+        <script src="./assets/vendor/libs/bloodhound/bloodhound.js"></script>
+        <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+
+<script>
+  new DataTable('#exampleDT');
+</script>
+    
+
+        
+    <!-- Main JS -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
+
+        <!-- Page JS -->
+        <script src="./assets/js/tables-datatables-basic.js"></script>
+
+
+  </body>
+</html>
