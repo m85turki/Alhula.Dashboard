@@ -1,0 +1,18 @@
+﻿@media only screen and (max-width: 768px){
+  thead{
+    display: none;
+  }
+.tbl-responsive th, .tbl-responsive td, .tbl-responsive tr {
+    display: block;
+    width: 100% !important;
+}
+
+.tbl-responsive tr {
+    padding-bottom: 15px;
+    border-bottom-width: 1px;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-width: 0px;
+}
+}

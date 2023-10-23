@@ -5,32 +5,38 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   (function () {
-    const verticalExample = document.getElementById('vertical-example'),
-      horizontalExample = document.getElementById('horizontal-example'),
-      horizVertExample = document.getElementById('both-scrollbars-example');
+    const verticalExamples = document.querySelectorAll('.vertical-example'),
+      horizontalExamples = document.querySelectorAll('.horizontal-example'),
+      horizVertExamples = document.querySelectorAll('.both-scrollbars-example');
 
-    // Vertical Example
+    // Vertical Examples
     // --------------------------------------------------------------------
-    if (verticalExample) {
-      new PerfectScrollbar(verticalExample, {
-        wheelPropagation: false
+    if (verticalExamples.length > 0) {
+      verticalExamples.forEach((element) => {
+        new PerfectScrollbar(element, {
+          wheelPropagation: false
+        });
       });
     }
 
-    // Horizontal Example
+    // Horizontal Examples
     // --------------------------------------------------------------------
-    if (horizontalExample) {
-      new PerfectScrollbar(horizontalExample, {
-        wheelPropagation: false,
-        suppressScrollY: true
+    if (horizontalExamples.length > 0) {
+      horizontalExamples.forEach((element) => {
+        new PerfectScrollbar(element, {
+          wheelPropagation: false,
+          suppressScrollY: true
+        });
       });
     }
 
-    // Both vertical and Horizontal Example
+    // Both vertical and Horizontal Examples
     // --------------------------------------------------------------------
-    if (horizVertExample) {
-      new PerfectScrollbar(horizVertExample, {
-        wheelPropagation: false
+    if (horizVertExamples.length > 0) {
+      horizVertExamples.forEach((element) => {
+        new PerfectScrollbar(element, {
+          wheelPropagation: false
+        });
       });
     }
   })();

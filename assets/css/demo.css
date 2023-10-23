@@ -206,3 +206,7 @@
 .offcanvas.offcanvas-end {
   width: 600px;
 }
+
+.name-mw{
+  min-width: 165px;
+}
