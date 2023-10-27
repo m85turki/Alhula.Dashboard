@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="./assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/flatpickr/flatpickr.css" />
+   
     <!-- Row Group CSS -->
     <link rel="stylesheet" href="./assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css" />
     <!-- Form Validation -->
@@ -809,28 +810,23 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="py-3 mb-2">
-                <span class="text-muted fw-light">إدارة المستخدمين /</span> قائمة المشرف العام</h4>
+                <span class="text-muted fw-light">إدارة حلقات التدريس /</span> إدارة الحلقات التدريسية</h4>
 
               <div class="row">
                 <div class="col-md-12">
                   <ul class="nav nav-pills flex-column flex-md-row mb-4">
                     <li class="nav-item">
+                      <a class="nav-link" href="javascript:void(0);">
+                        أنواع ومحتوى الحلقات</a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link active" href="javascript:void(0);">
-                        قائمة المشرف العام</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="javascript:void(0);">
-                        قائمة المستخدمين </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="javascript:void(0);">
-                        قائمة الطلاب
-                      </a>
+                        إدارة الحلقات التدريسية </a>
                     </li>
                   </ul>
-                  <div class="card mb-4">
+                  <div class="card">
                     <div class="card-header sticky-element bg-label-secondary d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
-                      <h5 class="card-title mb-sm-0 me-2">قائمة المشرف العام</h5>
+                      <h5 class="card-title mb-sm-0 me-2">إدارة الحلقات التدريسية</h5>
                       <div class="action-btns">
                         <button class="btn btn-primary"
                         type="button"
@@ -838,7 +834,7 @@
                           data-bs-target="#offcanvasBoth"
                           aria-controls="offcanvasBoth">
                           <i class="ti ti-plus me-1 ti-xs"></i>
-                          إضافة مستخدم جديد
+                          اضافة حلقة تدرسية
                         </button>
 
 
@@ -1184,10 +1180,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- / Content -->
-
-
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
@@ -1209,6 +1201,11 @@
             <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
+
+            </div>
+            <!-- / Content -->
+
+
           </div>
           <!-- Content wrapper -->
         </div>
@@ -1444,7 +1441,14 @@
 
               },
               "lengthChange": false, // لإخفاء خيار "Table length"
-              "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]] // خيارات العدد المخصصة
+              "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
+              "columnDefs": [
+                {
+                  "targets": -1, // العمود الأخير (العمود الذي يحتوي على الإجراءات)
+                  //"targets": [3, 4], // العواميد الثالث والرابع (العمود "معلومات الاتصال" والعمود "الإجراءات")
+                  "orderable": false // إزالة إمكانية الترتيب
+                }
+              ]
             });
 
              // التفاعل مع العنصر الجديد المخصص

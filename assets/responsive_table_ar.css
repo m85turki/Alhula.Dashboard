@@ -4,7 +4,7 @@
   }
 .tbl-responsive th, .tbl-responsive td, .tbl-responsive tr {
     display: block;
-    width: 100% !important;
+    /*width: 100% !important;*/
 }
 
 .tbl-responsive tr {

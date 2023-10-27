@@ -14,7 +14,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>إدارة المستخدمين</title>
+    <title>عرض الحلقة التدريسية</title>
 
     <meta name="description" content="" />
 
@@ -67,18 +67,18 @@
     <!-- Form Validation -->
     <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
-    
-   
-
     <!-- Page CSS -->
+
+    <link rel="stylesheet" href="./assets/vendor/css/pages/page-user-view.css" />
 
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="./assets/js/config.js"></script>
-  <body>
+  </head>
 
+  <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -378,13 +378,42 @@
                 <div class="nav-item navbar-search-wrapper mb-0">
                   <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
                     <i class="ti ti-search ti-md me-2"></i>
-                    <span class="d-none d-md-inline-block text-muted">البحث</span>
+                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
                   </a>
                 </div>
               </div>
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Language -->
+                <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <i class="ti ti-language rounded-circle ti-md"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="en">
+                        <span class="align-middle">English</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="fr">
+                        <span class="align-middle">French</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="de">
+                        <span class="align-middle">German</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="pt">
+                        <span class="align-middle">Portuguese</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Language -->
 
                 <!-- Quick links  -->
                 <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
@@ -399,33 +428,48 @@
                   <div class="dropdown-menu dropdown-menu-end py-0">
                     <div class="dropdown-menu-header border-bottom">
                       <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">إختصارات</h5>
+                        <h5 class="text-body mb-0 me-auto">Shortcuts</h5>
                         <a
                           href="javascript:void(0)"
                           class="dropdown-shortcuts-add text-body"
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
-                          title="إضافة إختصارات"
+                          title="Add shortcuts"
                           ><i class="ti ti-sm ti-apps"></i
                         ></a>
                       </div>
                     </div>
                     <div class="dropdown-shortcuts-list scrollable-container">
-                      
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-calendar fs-4"></i>
+                          </span>
+                          <a href="app-calendar.html" class="stretched-link">Calendar</a>
+                          <small class="text-muted mb-0">Appointments</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-file-invoice fs-4"></i>
+                          </span>
+                          <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
+                          <small class="text-muted mb-0">Manage Accounts</small>
+                        </div>
+                      </div>
                       <div class="row row-bordered overflow-visible g-0">
                         <div class="dropdown-shortcuts-item col">
                           <span class="dropdown-shortcuts-icon rounded-circle mb-2">
                             <i class="ti ti-users fs-4"></i>
                           </span>
-                          <a href="app-user-list.html" class="stretched-link">إدارة المستخدمين</a>
-                          <small class="text-muted mb-0">الحسابات</small>
+                          <a href="app-user-list.html" class="stretched-link">User App</a>
+                          <small class="text-muted mb-0">Manage Users</small>
                         </div>
                         <div class="dropdown-shortcuts-item col">
                           <span class="dropdown-shortcuts-icon rounded-circle mb-2">
                             <i class="ti ti-lock fs-4"></i>
                           </span>
-                          <a href="app-access-roles.html" class="stretched-link">إدارة الأدوار</a>
-                          <small class="text-muted mb-0">الصلاحيات</small>
+                          <a href="app-access-roles.html" class="stretched-link">Role Management</a>
+                          <small class="text-muted mb-0">Permission</small>
                         </div>
                       </div>
                       <div class="row row-bordered overflow-visible g-0">
@@ -433,15 +477,15 @@
                           <span class="dropdown-shortcuts-icon rounded-circle mb-2">
                             <i class="ti ti-chart-bar fs-4"></i>
                           </span>
-                          <a href="javascript:void(0);" class="stretched-link">تقرير الطلاب</a>
-                          <small class="text-muted mb-0">التفصيلي</small>
+                          <a href="index.html" class="stretched-link">Dashboard</a>
+                          <small class="text-muted mb-0">User Profile</small>
                         </div>
                         <div class="dropdown-shortcuts-item col">
                           <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-file-invoice fs-4"></i>
+                            <i class="ti ti-settings fs-4"></i>
                           </span>
-                          <a href="app-invoice-list.html" class="stretched-link">الفواتير</a>
-                          <small class="text-muted mb-0">طرق الدفع</small>
+                          <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
+                          <small class="text-muted mb-0">Account Settings</small>
                         </div>
                       </div>
                       <div class="row row-bordered overflow-visible g-0">
@@ -449,15 +493,15 @@
                           <span class="dropdown-shortcuts-icon rounded-circle mb-2">
                             <i class="ti ti-help fs-4"></i>
                           </span>
-                          <a href="pages-faq.html" class="stretched-link">الأسئلة الأكثر</a>
-                          <small class="text-muted mb-0">شيوعا</small>
+                          <a href="pages-faq.html" class="stretched-link">FAQs</a>
+                          <small class="text-muted mb-0">FAQs & Articles</small>
                         </div>
                         <div class="dropdown-shortcuts-item col">
                           <span class="dropdown-shortcuts-icon rounded-circle mb-2">
                             <i class="ti ti-square fs-4"></i>
                           </span>
-                          <a href="modal-examples.html" class="stretched-link">إدارة نماذج الشهادات</a>
-                          <small class="text-muted mb-0">النتائج</small>
+                          <a href="modal-examples.html" class="stretched-link">Modals</a>
+                          <small class="text-muted mb-0">Useful Popups</small>
                         </div>
                       </div>
                     </div>
@@ -479,7 +523,7 @@
                   <ul class="dropdown-menu dropdown-menu-end py-0">
                     <li class="dropdown-menu-header border-bottom">
                       <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">التنبيهات</h5>
+                        <h5 class="text-body mb-0 me-auto">Notification</h5>
                         <a
                           href="javascript:void(0)"
                           class="dropdown-notifications-all text-body"
@@ -500,9 +544,9 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">ألف مبروك 🎉</h6>
-                              <p class="mb-0">حصل على الشارة الذهبية لأفضل حافظ شهريا</p>
-                              <small class="text-muted">قبل 1س</small>
+                              <h6 class="mb-1">Congratulation Lettie 🎉</h6>
+                              <p class="mb-0">Won the monthly best seller gold badge</p>
+                              <small class="text-muted">1h ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -518,13 +562,13 @@
                           <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                               <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-danger">س أ</span>
+                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه</h6>
-                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه نص التنبيه </p>
-                              <small class="text-muted">قبل 12س</small>
+                              <h6 class="mb-1">Charles Franklin</h6>
+                              <p class="mb-0">Accepted your connection</p>
+                              <small class="text-muted">12hr ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -540,13 +584,13 @@
                           <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                               <div class="avatar">
-                                <img src="./assets/img/avatars/3.png" alt class="h-auto rounded-circle" />
+                                <img src="./assets/img/avatars/2.png" alt class="h-auto rounded-circle" />
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">رسالة جديده ✉️</h6>
-                              <p class="mb-0">مختصر عن الرسالة الجديده</p>
-                              <small class="text-muted">قبل 1س</small>
+                              <h6 class="mb-1">New Message ✉️</h6>
+                              <p class="mb-0">You have new message from Natalie</p>
+                              <small class="text-muted">1h ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -568,9 +612,9 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه 🛒</h6>
-                              <p class="mb-0">نص التنبيه</p>
-                              <small class="text-muted">قبل 8س</small>
+                              <h6 class="mb-1">Whoo! You have new order 🛒</h6>
+                              <p class="mb-0">ACME Inc. made new order $1,154</p>
+                              <small class="text-muted">1 day ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -590,9 +634,9 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه 🚀</h6>
-                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
-                              <small class="text-muted">قبل 2س</small>
+                              <h6 class="mb-1">Application has been approved 🚀</h6>
+                              <p class="mb-0">Your ABC project application has been approved.</p>
+                              <small class="text-muted">2 days ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -614,9 +658,9 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه</h6>
-                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
-                              <small class="text-muted">قبل 5س</small>
+                              <h6 class="mb-1">Monthly report is generated</h6>
+                              <p class="mb-0">July monthly financial report is generated</p>
+                              <small class="text-muted">3 days ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -636,9 +680,9 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه</h6>
-                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
-                              <small class="text-muted">قبل 5س</small>
+                              <h6 class="mb-1">Send connection request</h6>
+                              <p class="mb-0">Peter sent you connection request</p>
+                              <small class="text-muted">4 days ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -654,13 +698,13 @@
                           <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                               <div class="avatar">
-                                <img src="./assets/img/avatars/7.png" alt class="h-auto rounded-circle" />
+                                <img src="./assets/img/avatars/6.png" alt class="h-auto rounded-circle" />
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه</h6>
-                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
-                              <small class="text-muted">قبل 5س</small>
+                              <h6 class="mb-1">New message from Jane</h6>
+                              <p class="mb-0">Your have new message from Jane</p>
+                              <small class="text-muted">5 days ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -682,9 +726,9 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <h6 class="mb-1">عنوان التنبيه</h6>
-                              <p class="mb-0">نص التنبيه نص التنبيه نص التنبيه</p>
-                              <small class="text-muted">قبل 5س</small>
+                              <h6 class="mb-1">CPU is running high</h6>
+                              <p class="mb-0">CPU Utilization Percent is currently at 88.63%,</p>
+                              <small class="text-muted">5 days ago</small>
                             </div>
                             <div class="flex-shrink-0 dropdown-notifications-actions">
                               <a href="javascript:void(0)" class="dropdown-notifications-read"
@@ -702,7 +746,7 @@
                       <a
                         href="javascript:void(0);"
                         class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center">
-                        عرض جميع التنبيهات
+                        View all notifications
                       </a>
                     </li>
                   </ul>
@@ -712,11 +756,8 @@
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online d-none">
-                      <img src="./assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                    </div>
                     <div class="avatar avatar-online">
-                      <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                      <img src="./assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -725,12 +766,12 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
+                              <img src="./assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-medium d-block">محمد تركي</span>
-                            <small class="text-muted">مدير</small>
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
                           </div>
                         </div>
                       </a>
@@ -741,20 +782,20 @@
                     <li>
                       <a class="dropdown-item" href="pages-profile-user.html">
                         <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">ملفي الشخصي</span>
+                        <span class="align-middle">My Profile</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="pages-account-settings-account.html">
                         <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">الإعدادات</span>
+                        <span class="align-middle">Settings</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="pages-account-settings-billing.html">
                         <span class="d-flex align-items-center align-middle">
                           <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
-                          <span class="flex-grow-1 align-middle">الفواتير</span>
+                          <span class="flex-grow-1 align-middle">Billing</span>
                           <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
                             >2</span
                           >
@@ -767,13 +808,13 @@
                     <li>
                       <a class="dropdown-item" href="pages-faq.html">
                         <i class="ti ti-help me-2 ti-sm"></i>
-                        <span class="align-middle">الأسئلة الاكثر شيوعا</span>
+                        <span class="align-middle">FAQ</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="pages-pricing.html">
                         <i class="ti ti-currency-dollar me-2 ti-sm"></i>
-                        <span class="align-middle">الأسعار</span>
+                        <span class="align-middle">Pricing</span>
                       </a>
                     </li>
                     <li>
@@ -782,7 +823,7 @@
                     <li>
                       <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
                         <i class="ti ti-logout me-2 ti-sm"></i>
-                        <span class="align-middle">تسجيل الخروج</span>
+                        <span class="align-middle">Log Out</span>
                       </a>
                     </li>
                   </ul>
@@ -796,8 +837,8 @@
               <input
                 type="text"
                 class="form-control search-input container-xxl border-0"
-                placeholder="البحث..."
-                aria-label="البحث..." />
+                placeholder="Search..."
+                aria-label="Search..." />
               <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
             </div>
           </nav>
@@ -809,382 +850,525 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="py-3 mb-2">
-                <span class="text-muted fw-light">إدارة المستخدمين /</span> قائمة المشرف العام</h4>
-
+              <h4 class="py-3 mb-4"><span class="text-muted fw-light">User / View /</span> Account</h4>
               <div class="row">
-                <div class="col-md-12">
-                  <ul class="nav nav-pills flex-column flex-md-row mb-4">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="javascript:void(0);">
-                        قائمة المشرف العام</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="javascript:void(0);">
-                        قائمة المستخدمين </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="javascript:void(0);">
-                        قائمة الطلاب
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="card">
-                    <div class="card-header sticky-element bg-label-secondary d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
-                      <h5 class="card-title mb-sm-0 me-2">قائمة المشرف العام</h5>
-                      <div class="action-btns">
-                        <button class="btn btn-primary"
-                        type="button"
-                          data-bs-toggle="offcanvas"
-                          data-bs-target="#offcanvasBoth"
-                          aria-controls="offcanvasBoth">
-                          <i class="ti ti-plus me-1 ti-xs"></i>
-                          إضافة مستخدم جديد
-                        </button>
-
-
-                        
-
-                      </div>
-                    </div>
-
-                    <div class="card-header sticky-element bg-label-secondary z-6 position-relative">
-                      
-                      <div class="row g-4 justify-content-sm-between align-items-sm-end">
-
-                      <div class="col-12 col-md">
-                        <h6 class="card-title mb-2 me-2">البحث والفلتره</h6>
-                          <div class="row g-3 gap-md-0 align-items-center">
-                            <div class="col-12 col-md-6">
-                              <input type="text" id="searchInput" class="form-control" placeholder="بحث...">
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <select  id="filterType" class="selectpicker w-100" data-style="btn-default"
-                              multiple
-                              placeholder="نوع الحلقة">
-                              <option value="">الكل</option>
-                              <option value="حلقة التأسيس">حلقة التأسيس</option>
-                              <!-- إضافة المزيد من الخيارات حسب احتياجك -->
-                              </select>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <select id="filterStatus" class="selectpicker w-100" data-style="btn-default"
-                              multiple
-                              placeholder="الحالة">
-                              <option value="فعال">فعال</option>
-                              <option value="مكتمل">مكتمل</option>
-                              <option value="مجدول">مجدول</option>
-                              <option value="قيد الإنتظار">قيد الإنتظار</option>
-                              </select>
-                            </div>
+                <!-- User Sidebar -->
+                <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+                  <!-- User Card -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <div class="user-avatar-section">
+                        <div class="d-flex align-items-center flex-column">
+                          <img
+                            class="img-fluid rounded mb-3 pt-1 mt-4"
+                            src="./assets/img/avatars/15.png"
+                            height="100"
+                            width="100"
+                            alt="User avatar" />
+                          <div class="user-info text-center">
+                            <h4 class="mb-2">Violet Mendoza</h4>
+                            <span class="badge bg-label-secondary mt-1">Author</span>
                           </div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <select t id="table-length-select" class="selectpicker w-100" data-style="btn-default">
-                          <option value="10">10</option>
-                          <option value="25">25</option>
-                          <option value="50">50</option>
-                          <option value="100">100</option>
-                        </select>
+                      <div class="d-flex justify-content-around flex-wrap mt-3 pt-3 pb-4 border-bottom">
+                        <div class="d-flex align-items-start me-4 mt-3 gap-2">
+                          <span class="badge bg-label-primary p-2 rounded"><i class="ti ti-checkbox ti-sm"></i></span>
+                          <div>
+                            <p class="mb-0 fw-medium">1.23k</p>
+                            <small>Tasks Done</small>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start mt-3 gap-2">
+                          <span class="badge bg-label-primary p-2 rounded"><i class="ti ti-briefcase ti-sm"></i></span>
+                          <div>
+                            <p class="mb-0 fw-medium">568</p>
+                            <small>Projects Done</small>
+                          </div>
+                        </div>
                       </div>
-
+                      <p class="mt-4 small text-uppercase text-muted">Details</p>
+                      <div class="info-container">
+                        <ul class="list-unstyled">
+                          <li class="mb-2">
+                            <span class="fw-medium me-1">Username:</span>
+                            <span>violet.dev</span>
+                          </li>
+                          <li class="mb-2 pt-1">
+                            <span class="fw-medium me-1">Email:</span>
+                            <span>vafgot@vultukir.org</span>
+                          </li>
+                          <li class="mb-2 pt-1">
+                            <span class="fw-medium me-1">Status:</span>
+                            <span class="badge bg-label-success">Active</span>
+                          </li>
+                          <li class="mb-2 pt-1">
+                            <span class="fw-medium me-1">Role:</span>
+                            <span>Author</span>
+                          </li>
+                          <li class="mb-2 pt-1">
+                            <span class="fw-medium me-1">Tax id:</span>
+                            <span>Tax-8965</span>
+                          </li>
+                          <li class="mb-2 pt-1">
+                            <span class="fw-medium me-1">Contact:</span>
+                            <span>(123) 456-7890</span>
+                          </li>
+                          <li class="mb-2 pt-1">
+                            <span class="fw-medium me-1">Languages:</span>
+                            <span>French</span>
+                          </li>
+                          <li class="pt-1">
+                            <span class="fw-medium me-1">Country:</span>
+                            <span>England</span>
+                          </li>
+                        </ul>
+                        <div class="d-flex justify-content-center">
+                          <a
+                            href="javascript:;"
+                            class="btn btn-primary me-3"
+                            data-bs-target="#editUser"
+                            data-bs-toggle="modal"
+                            >Edit</a
+                          >
+                          <a href="javascript:;" class="btn btn-label-danger suspend-user">Suspended</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                    <div class="row z-1 position-relative">
-                      <div class="col-12">
-                        <!-- Account -->
-                        <div class="card-body">
-                          
-
-                          <div class="table-responsive tbl-responsive">
-
-                            <table  class="example-dt table table-hover datatables-basic">
-                              <thead>
-                                <tr>
-                                  <th>الاسم بالكامل</th>
-                                  <th>نوع الحلقة</th>
-                                  <th>الحالة</th>
-                                  <th>معلومات التواصل</th>
-                                  <th style="width: 1%;">الاجراءات</th>
-                                </tr>
-                              </thead>
-                              <tbody class="table-border-bottom-0">
-                                <tr>
-                                  <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">أحمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-primary me-1">فعال</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
-                                        <span>
-                                          +965 97935052
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-edit ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record">
-                                        <i class="ti ti-trash ti-sm mx-1"></i>
-                                      </a>
-
-                                      <div class="dropdown">
-                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                          <a class="dropdown-item" href="javascript:void(0);" >
-                                            عرض
-                                          </a>
-                                          <a class="dropdown-item" href="javascript:void(0);">
-                                            دعم
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-success me-1">مكتمل</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
-                                        <span>
-                                          +965 97935052
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-edit ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record">
-                                        <i class="ti ti-trash ti-sm mx-1"></i>
-                                      </a>
-
-                                      <div class="dropdown">
-                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                          <a class="dropdown-item" href="javascript:void(0);" >
-                                            عرض
-                                          </a>
-                                          <a class="dropdown-item" href="javascript:void(0);">
-                                            دعم
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-info me-1">مجدول</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
-                                        <span>
-                                          +965 97935052
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-edit ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record">
-                                        <i class="ti ti-trash ti-sm mx-1"></i>
-                                      </a>
-
-                                      <div class="dropdown">
-                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                          <a class="dropdown-item" href="javascript:void(0);" >
-                                            عرض
-                                          </a>
-                                          <a class="dropdown-item" href="javascript:void(0);">
-                                            دعم
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-warning me-1">قيد الإنتظار</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
-                                        <span>
-                                          +965 97935052
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-edit ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record">
-                                        <i class="ti ti-trash ti-sm mx-1"></i>
-                                      </a>
-
-                                      <div class="dropdown">
-                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                          <a class="dropdown-item" href="javascript:void(0);" >
-                                            عرض
-                                          </a>
-                                          <a class="dropdown-item" href="javascript:void(0);">
-                                            دعم
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                          </div>
-
-                         
-          
-
-
+                  <!-- /User Card -->
+                  <!-- Plan Card -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <span class="badge bg-label-primary">Standard</span>
+                        <div class="d-flex justify-content-center">
+                          <sup class="h6 pricing-currency mt-3 mb-0 me-1 text-primary fw-normal">$</sup>
+                          <h1 class="mb-0 text-primary">99</h1>
+                          <sub class="h6 pricing-duration mt-auto mb-2 text-muted fw-normal">/month</sub>
                         </div>
-                        <!-- /Account -->
+                      </div>
+                      <ul class="ps-3 g-2 my-3">
+                        <li class="mb-2">10 Users</li>
+                        <li class="mb-2">Up to 10 GB storage</li>
+                        <li>Basic Support</li>
+                      </ul>
+                      <div class="d-flex justify-content-between align-items-center mb-1 fw-medium text-heading">
+                        <span>Days</span>
+                        <span>65% Completed</span>
+                      </div>
+                      <div class="progress mb-1" style="height: 8px">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 65%"
+                          aria-valuenow="65"
+                          aria-valuemin="0"
+                          aria-valuemax="100"></div>
+                      </div>
+                      <span>4 days remaining</span>
+                      <div class="d-grid w-100 mt-4">
+                        <button class="btn btn-primary" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">
+                          Upgrade Plan
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Plan Card -->
+                </div>
+                <!--/ User Sidebar -->
+
+                <!-- User Content -->
+                <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+                  <!-- User Pills -->
+                  <ul class="nav nav-pills flex-column flex-md-row mb-4">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0);"
+                        ><i class="ti ti-user-check ti-xs me-1"></i>Account</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app-user-view-security.html"
+                        ><i class="ti ti-lock ti-xs me-1"></i>Security</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app-user-view-billing.html"
+                        ><i class="ti ti-currency-dollar ti-xs me-1"></i>Billing & Plans</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app-user-view-notifications.html"
+                        ><i class="ti ti-bell ti-xs me-1"></i>Notifications</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app-user-view-connections.html"
+                        ><i class="ti ti-link ti-xs me-1"></i>Connections</a
+                      >
+                    </li>
+                  </ul>
+                  <!--/ User Pills -->
+
+                  <!-- Project table -->
+                  <div class="card mb-4">
+                    <h5 class="card-header">User's Projects List</h5>
+                    <div class="table-responsive mb-3">
+                      <table class="table datatable-project border-top">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Project</th>
+                            <th class="text-nowrap">Total Task</th>
+                            <th>Progress</th>
+                            <th>Hours</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- /Project table -->
+
+                  <!-- Activity Timeline -->
+                  <div class="card mb-4">
+                    <h5 class="card-header">User Activity Timeline</h5>
+                    <div class="card-body pb-0">
+                      <ul class="timeline mb-0">
+                        <li class="timeline-item timeline-item-transparent">
+                          <span class="timeline-point timeline-point-primary"></span>
+                          <div class="timeline-event">
+                            <div class="timeline-header mb-1">
+                              <h6 class="mb-0">12 Invoices have been paid</h6>
+                              <small class="text-muted">12 min ago</small>
+                            </div>
+                            <p class="mb-2">Invoices have been paid to the company</p>
+                            <div class="d-flex">
+                              <a href="javascript:void(0)" class="me-3">
+                                <img
+                                  src="./assets/img/icons/misc/pdf.png"
+                                  alt="PDF image"
+                                  width="15"
+                                  class="me-2" />
+                                <span class="fw-medium text-heading">invoices.pdf</span>
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="timeline-item timeline-item-transparent">
+                          <span class="timeline-point timeline-point-warning"></span>
+                          <div class="timeline-event">
+                            <div class="timeline-header mb-1">
+                              <h6 class="mb-0">Client Meeting</h6>
+                              <small class="text-muted">45 min ago</small>
+                            </div>
+                            <p class="mb-2">Project meeting with john @10:15am</p>
+                            <div class="d-flex flex-wrap">
+                              <div class="avatar me-3">
+                                <img src="./assets/img/avatars/3.png" alt="Avatar" class="rounded-circle" />
+                              </div>
+                              <div>
+                                <h6 class="mb-0">Lester McCarthy (Client)</h6>
+                                <small>CEO of Pixinvent</small>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="timeline-item timeline-item-transparent">
+                          <span class="timeline-point timeline-point-info"></span>
+                          <div class="timeline-event">
+                            <div class="timeline-header mb-1">
+                              <h6 class="mb-0">Create a new project for client</h6>
+                              <small class="text-muted">2 Day Ago</small>
+                            </div>
+                            <p class="mb-2">5 team members in a project</p>
+                            <div class="d-flex align-items-center avatar-group">
+                              <div
+                                class="avatar pull-up"
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                title="Vinnie Mostowy">
+                                <img src="./assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                              </div>
+                              <div
+                                class="avatar pull-up"
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                title="Marrie Patty">
+                                <img src="./assets/img/avatars/12.png" alt="Avatar" class="rounded-circle" />
+                              </div>
+                              <div
+                                class="avatar pull-up"
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                title="Jimmy Jackson">
+                                <img src="./assets/img/avatars/9.png" alt="Avatar" class="rounded-circle" />
+                              </div>
+                              <div
+                                class="avatar pull-up"
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                title="Kristine Gill">
+                                <img src="./assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                              </div>
+                              <div
+                                class="avatar pull-up"
+                                data-bs-toggle="tooltip"
+                                data-popup="tooltip-custom"
+                                data-bs-placement="top"
+                                title="Nelson Wilson">
+                                <img src="./assets/img/avatars/4.png" alt="Avatar" class="rounded-circle" />
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="timeline-item timeline-item-transparent border-transparent">
+                          <span class="timeline-point timeline-point-success"></span>
+                          <div class="timeline-event">
+                            <div class="timeline-header mb-1">
+                              <h6 class="mb-0">Design Review</h6>
+                              <small class="text-muted">5 days Ago</small>
+                            </div>
+                            <p class="mb-0">Weekly review of freshly prepared design for our new app.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- /Activity Timeline -->
+
+                  <!-- Invoice table -->
+                  <div class="card mb-4">
+                    <div class="table-responsive mb-3">
+                      <table class="table datatable-invoice border-top">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>ID</th>
+                            <th><i class="ti ti-trending-up text-secondary"></i></th>
+                            <th>Total</th>
+                            <th>Issued Date</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- /Invoice table -->
+                </div>
+                <!--/ User Content -->
+              </div>
+
+              <!-- Modal -->
+              <!-- Edit User Modal -->
+              <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+                  <div class="modal-content p-3 p-md-5">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <div class="text-center mb-4">
+                        <h3 class="mb-2">Edit User Information</h3>
+                        <p class="text-muted">Updating user details will receive a privacy audit.</p>
+                      </div>
+                      <form id="editUserForm" class="row g-3" onsubmit="return false">
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserFirstName">First Name</label>
+                          <input
+                            type="text"
+                            id="modalEditUserFirstName"
+                            name="modalEditUserFirstName"
+                            class="form-control"
+                            placeholder="John" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserLastName">Last Name</label>
+                          <input
+                            type="text"
+                            id="modalEditUserLastName"
+                            name="modalEditUserLastName"
+                            class="form-control"
+                            placeholder="Doe" />
+                        </div>
+                        <div class="col-12">
+                          <label class="form-label" for="modalEditUserName">Username</label>
+                          <input
+                            type="text"
+                            id="modalEditUserName"
+                            name="modalEditUserName"
+                            class="form-control"
+                            placeholder="john.doe.007" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserEmail">Email</label>
+                          <input
+                            type="text"
+                            id="modalEditUserEmail"
+                            name="modalEditUserEmail"
+                            class="form-control"
+                            placeholder="example@domain.com" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserStatus">Status</label>
+                          <select
+                            id="modalEditUserStatus"
+                            name="modalEditUserStatus"
+                            class="select2 form-select"
+                            aria-label="Default select example">
+                            <option selected>Status</option>
+                            <option value="1">Active</option>
+                            <option value="2">Inactive</option>
+                            <option value="3">Suspended</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditTaxID">Tax ID</label>
+                          <input
+                            type="text"
+                            id="modalEditTaxID"
+                            name="modalEditTaxID"
+                            class="form-control modal-edit-tax-id"
+                            placeholder="123 456 7890" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserPhone">Phone Number</label>
+                          <div class="input-group">
+                            <span class="input-group-text">US (+1)</span>
+                            <input
+                              type="text"
+                              id="modalEditUserPhone"
+                              name="modalEditUserPhone"
+                              class="form-control phone-number-mask"
+                              placeholder="202 555 0111" />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserLanguage">Language</label>
+                          <select
+                            id="modalEditUserLanguage"
+                            name="modalEditUserLanguage"
+                            class="select2 form-select"
+                            multiple>
+                            <option value="">Select</option>
+                            <option value="english" selected>English</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="french">French</option>
+                            <option value="german">German</option>
+                            <option value="dutch">Dutch</option>
+                            <option value="hebrew">Hebrew</option>
+                            <option value="sanskrit">Sanskrit</option>
+                            <option value="hindi">Hindi</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label class="form-label" for="modalEditUserCountry">Country</label>
+                          <select
+                            id="modalEditUserCountry"
+                            name="modalEditUserCountry"
+                            class="select2 form-select"
+                            data-allow-clear="true">
+                            <option value="">Select</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Canada">Canada</option>
+                            <option value="China">China</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Korea">Korea, Republic of</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Russia">Russian Federation</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <label class="switch">
+                            <input type="checkbox" class="switch-input" />
+                            <span class="switch-toggle-slider">
+                              <span class="switch-on"></span>
+                              <span class="switch-off"></span>
+                            </span>
+                            <span class="switch-label">Use as a billing address?</span>
+                          </label>
+                        </div>
+                        <div class="col-12 text-center">
+                          <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
+                          <button
+                            type="reset"
+                            class="btn btn-label-secondary"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+                            Cancel
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/ Edit User Modal -->
+
+              <!-- Add New Credit Card Modal -->
+              <div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-simple modal-upgrade-plan">
+                  <div class="modal-content p-3 p-md-5">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <div class="text-center mb-4">
+                        <h3 class="mb-2">Upgrade Plan</h3>
+                        <p>Choose the best plan for user.</p>
+                      </div>
+                      <form id="upgradePlanForm" class="row g-3" onsubmit="return false">
+                        <div class="col-sm-8">
+                          <label class="form-label" for="choosePlan">Choose Plan</label>
+                          <select id="choosePlan" name="choosePlan" class="form-select" aria-label="Choose Plan">
+                            <option selected>Choose Plan</option>
+                            <option value="standard">Standard - $99/month</option>
+                            <option value="exclusive">Exclusive - $249/month</option>
+                            <option value="Enterprise">Enterprise - $499/month</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-4 d-flex align-items-end">
+                          <button type="submit" class="btn btn-primary">Upgrade</button>
+                        </div>
+                      </form>
+                    </div>
+                    <hr class="mx-md-n5 mx-n3" />
+                    <div class="modal-body">
+                      <p class="mb-0">User current plan is standard plan</p>
+                      <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="d-flex justify-content-center me-2">
+                          <sup class="h6 pricing-currency pt-1 mt-3 mb-0 me-1 text-primary">$</sup>
+                          <h1 class="display-5 mb-0 text-primary">99</h1>
+                          <sub class="h5 pricing-duration mt-auto mb-2 text-muted">/month</sub>
+                        </div>
+                        <button class="btn btn-label-danger cancel-subscription mt-3">Cancel Subscription</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!--/ Add New Credit Card Modal -->
+
+              <!-- /Modal -->
+            </div>
+            <!-- / Content -->
+
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
@@ -1206,11 +1390,6 @@
             <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
-
-            </div>
-            <!-- / Content -->
-
-
           </div>
           <!-- Content wrapper -->
         </div>
@@ -1223,159 +1402,7 @@
       <!-- Drag Target Area To SlideIn Menu On Small Screens -->
       <div class="drag-target"></div>
     </div>
-
     <!-- / Layout wrapper -->
-    
-    <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
-    <div class="offcanvas-header">
-      <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة مستخدم جديد</h5>
-      <button
-        type="button"
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body vertical-example my-auto mx-0 flex-grow-0">
-      <div class="row">
-        <div class="col-lg-12">
-          <!-- 1. Delivery Address -->
-          <h5 class="mb-3">1. نوع العضوية</h5>
-          <div class="row g-3 mb-4">
-            
-            <!-- Basic -->
-           
-            <div class="col-md-6">
-              <label class="form-label" for="">نوع العضوية</label>
-              <select id="" class="selectpicker w-100" data-style="btn-default"
-              placeholder="إختر نوع العضوية">
-                <option>إختر</option>
-                <option>إختر</option>
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <label for="" class="form-label">نوع الحلقة</label>
-              <select
-                id=""
-                class="selectpicker w-100"
-                multiple
-                data-style="btn-default"
-                data-live-search="true"
-                placeholder="حدد نوع الحلقة"
-                >
-                <option>نوع الحلقة-1</option>
-                <option>نوع الحلقة-2</option>
-              </select>
-            </div>
-            <div class="col-md-6 d-flex align-items-end ">
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input" type="checkbox" id="" />
-                <label class="form-check-label" for="">فعال</label>
-              </div>
-            </div>
-            <hr>
-
-        </div>
-          <h5 class="mb-3">2. المعلومات الأساسية</h5>
-          <div class="row g-3 mb-4">
-            
-            <!-- Basic -->
-            <div class="col-md-12">
-              <label class="form-label" for="">الإسم الكامل</label>
-              <input type="text" id="" class="form-control" placeholder="الاسم الرباعي" />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="">الجنس</label>
-              <select id="" class="selectpicker w-100" data-style="btn-default"
-              placeholder="إختر">
-                <option>ذكر</option>
-                <option>أنثى</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="">البريد الالكتروني</label>
-              <div class="input-group input-group-merge">
-                <input
-                  class="form-control"
-                  type="text"
-                  id=""
-                  name="email"
-                  placeholder="البريد الالكتروني"
-                  aria-label="البريد الالكتروني" />
-                
-              </div>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="">رقم الهاتف</label>
-              <input
-                type="text"
-                id=""
-                class="form-control phone-mask"
-                placeholder="658 799 8941"
-                aria-label="658 799 8941" />
-            </div>
-            <hr>
-          </div>
-
-          <h5 class="mb-3">3. العنوان</h5>
-            <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <label for="" class="form-label">الدولة</label>
-              <select
-                id=""
-                class="selectpicker w-100"
-                data-style="btn-default"
-                data-live-search="true"
-                placeholder="حدد الدولة">
-                <option>اسم الدولة</option>
-                <option>اسم الدولة</option>
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <label for="" class="form-label">المدينة</label>
-              <select
-                id=""
-                class="selectpicker w-100"
-                data-style="btn-default"
-                data-live-search="true"
-                placeholder="إختر المدينة"
-                >
-                <option>اسم المدينة</option>
-                <option>اسم المدينة</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label class="form-label" for="">العنوان</label>
-              <textarea
-                name="address"
-                class="form-control"
-                id=""
-                rows="2"
-                placeholder="حدد العنوان"></textarea>
-            </div>
-            
-
-
-            <hr>
-            <div class="col-12 action-btns">
-              <button class="btn btn-label-primary me-3 waves-effect">
-                <span class="align-middle">إلغاء</span>
-              </button>
-              <button class="btn btn-primary waves-effect waves-light">حفظ</button>
-            </div>
-
-
-        </div>
-      </div>
-    </div>
-
-    </div>
-  </div>
-
-
-    <!-- / Offcanvas -->
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -1393,125 +1420,22 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="./assets/vendor/libs/moment/moment.js"></script>
+    <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="./assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+    <script src="./assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="./assets/vendor/libs/cleavejs/cleave-phone.js"></script>
     <script src="./assets/vendor/libs/select2/select2.js"></script>
     <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
     <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
     <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
-    <script src="./assets/vendor/libs/cleavejs/cleave.js"></script>
-    <script src="./assets/vendor/libs/cleavejs/cleave-phone.js"></script>
-    <script src="./assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
 
-        <!-- Vendors JS -->
-        <script src="./assets/vendor/libs/select2/select2.js"></script>
-        <script src="./assets/vendor/libs/tagify/tagify.js"></script>
-        <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
-        <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
-        <script src="./assets/vendor/libs/bloodhound/bloodhound.js"></script>
-        <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-        <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-
-      
-
-
-
-
-
-
-
-        <script>
-          $(document).ready(function () {
-            var table = $('.example-dt').DataTable({
-              "language": {
-                "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
-                "sInfo": "عرض _START_ إلى _END_ من أصل _TOTAL_ مُدخل",
-                "sInfoEmpty": "عرض 0 إلى 0 من أصل 0 مُدخل",
-                "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
-                "sInfoPostFix": "",
-                "sInfoThousands": ",",
-                "sLengthMenu": "عرض _MENU_ مُدخل",
-                "sLoadingRecords": "جارٍ التحميل...",
-                "sProcessing": "جارٍ المعالجة...",
-                "sSearch": "بحث:",
-                "sZeroRecords": "لم يتم العثور على أية سجلات مطابقة",
-                "oPaginate": {
-                  "sFirst": "الأول",
-                  "sPrevious": "السابق",
-                  "sNext": "التالي",
-                  "sLast": "الأخير"
-                },
-                "oAria": {
-                  "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
-                  "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
-                },
-
-              },
-              "lengthChange": false, // لإخفاء خيار "Table length"
-              "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
-              "columnDefs": [
-                {
-                  "targets": -1, // العمود الأخير (العمود الذي يحتوي على الإجراءات)
-                  //"targets": [3, 4], // العواميد الثالث والرابع (العمود "معلومات الاتصال" والعمود "الإجراءات")
-                  "orderable": false // إزالة إمكانية الترتيب
-                }
-              ]
-            });
-
-             // التفاعل مع العنصر الجديد المخصص
-            $('#table-length-select').on('change', function () {
-                var length = $(this).val();
-                table.page.len(length).draw();
-            });
-
-            // إزالة مربع البحث
-            $(".dataTables_filter").hide();
-
-            $('#searchInput').on('keyup', function () {
-              table.search(this.value).draw();
-            });
-
-            /*$('#filterType').on('change', function () {
-              table.column(1).search(this.value).draw();
-            });
-
-            $('#filterStatus').on('change', function () {
-              table.column(2).search(this.value).draw();
-            });*/
-
-
-
-
-
-
-
-
-
-
-
-            // التفاعل مع الفلاتر
-            $('#filterType').on('change', function () {
-              var selectedValues = $('#filterType').val();
-              table.column(1).search(selectedValues.join('|'), true, false).draw();
-            });
-
-            $('#filterStatus').on('change', function () {
-              var selectedValues = $('#filterStatus').val();
-              table.column(2).search(selectedValues.join('|'), true, false).draw();
-            });
-
-
-
-
-
-
-          });
-        </script>
-        
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
-
-
+    <script src="./assets/js/modal-edit-user.js"></script>
+    <script src="./assets/js/app-user-view.js"></script>
+    <script src="./assets/js/app-user-view-account.js"></script>
   </body>
 </html>
