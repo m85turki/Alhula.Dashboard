@@ -3,7 +3,7 @@
 
 <html
   lang="ar"
-  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact layout-menu-collapsed"
   dir="rtl"
   data-theme="theme-default"
   data-assets-path="./assets/"
@@ -882,7 +882,7 @@
 
                       <div class="row pt-3 pb-2">
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modalLong">
                               <i class="ti ti-folders me-2 mt-n1"></i>
                               10 وثائق
                           </a>
@@ -1001,16 +1001,6 @@
                           <div class="row g-3 gap-md-0 align-items-center">
                             <div class="col-12 col-md-6">
                               <input type="text" id="searchInput" class="form-control" placeholder="بحث...">
-                            </div>
-                            
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <select  id="filterType" class="selectpicker w-100" data-style="btn-default"
-                              multiple
-                              placeholder="نوع الحلقة">
-                              <option value="">الكل</option>
-                              <option value="حلقة التأسيس">حلقة التأسيس</option>
-                              <!-- إضافة المزيد من الخيارات حسب احتياجك -->
-                              </select>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3">
                               <select id="filterStatus" class="selectpicker w-100" data-style="btn-default"
@@ -1530,48 +1520,107 @@
                 </div>
               </div>
               <!--/ Edit User Modal -->
-
-              <!-- Add New Credit Card Modal -->
-              <div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-simple modal-upgrade-plan">
-                  <div class="modal-content p-3 p-md-5">
-                    <div class="modal-body">
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      <div class="text-center mb-4">
-                        <h3 class="mb-2">Upgrade Plan</h3>
-                        <p>Choose the best plan for user.</p>
+              
+              <!-- المحتوى التدريسي -->
+                                        <!-- Modal -->
+                          
+                                        <div class="modal fade" id="modalLong" tabindex="-1" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title" id="modalLongTitle">المحتوى التدريسي</h5>
+                                                <button
+                                                  type="button"
+                                                  class="btn-close"
+                                                  data-bs-dismiss="modal"
+                                                  aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                  <div class="nav-align-left mb-4">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item">
+                        <button
+                          type="button"
+                          class="nav-link active"
+                          role="tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#navs-left-home"
+                          aria-controls="navs-left-home"
+                          aria-selected="true">
+                          وثائق
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <button
+                          type="button"
+                          class="nav-link"
+                          role="tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#navs-left-profile"
+                          aria-controls="navs-left-profile"
+                          aria-selected="false">
+                          روابط
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <button
+                          type="button"
+                          class="nav-link"
+                          role="tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#navs-left-messages"
+                          aria-controls="navs-left-messages"
+                          aria-selected="false">
+                          التفاصيل
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="navs-left-home">
+                        <p>
+                          Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
+                          powder. Bear claw candy topping.
+                        </p>
+                        <p class="mb-0">
+                          Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
+                          jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
+                          jujubes sweet.
+                        </p>
                       </div>
-                      <form id="upgradePlanForm" class="row g-3" onsubmit="return false">
-                        <div class="col-sm-8">
-                          <label class="form-label" for="choosePlan">Choose Plan</label>
-                          <select id="choosePlan" name="choosePlan" class="form-select" aria-label="Choose Plan">
-                            <option selected>Choose Plan</option>
-                            <option value="standard">Standard - $99/month</option>
-                            <option value="exclusive">Exclusive - $249/month</option>
-                            <option value="Enterprise">Enterprise - $499/month</option>
-                          </select>
-                        </div>
-                        <div class="col-sm-4 d-flex align-items-end">
-                          <button type="submit" class="btn btn-primary">Upgrade</button>
-                        </div>
-                      </form>
-                    </div>
-                    <hr class="mx-md-n5 mx-n3" />
-                    <div class="modal-body">
-                      <p class="mb-0">User current plan is standard plan</p>
-                      <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="d-flex justify-content-center me-2">
-                          <sup class="h6 pricing-currency pt-1 mt-3 mb-0 me-1 text-primary">$</sup>
-                          <h1 class="display-5 mb-0 text-primary">99</h1>
-                          <sub class="h5 pricing-duration mt-auto mb-2 text-muted">/month</sub>
-                        </div>
-                        <button class="btn btn-label-danger cancel-subscription mt-3">Cancel Subscription</button>
+                      <div class="tab-pane fade" id="navs-left-profile">
+                        <p>
+                          Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice
+                          cream. Gummies halvah tootsie roll muffin biscuit icing dessert gingerbread. Pastry ice cream
+                          cheesecake fruitcake.
+                        </p>
+                        <p class="mb-0">
+                          Jelly-o jelly beans icing pastry cake cake lemon drops. Muffin muffin pie tiramisu halvah
+                          cotton candy liquorice caramels.
+                        </p>
+                      </div>
+                      <div class="tab-pane fade" id="navs-left-messages">
+                        <p>
+                          Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies
+                          cupcake gummi bears cake chocolate.
+                        </p>
+                        <p class="mb-0">
+                          Cake chocolate bar cotton candy apple pie tootsie roll ice cream apple pie brownie cake. Sweet
+                          roll icing sesame snaps caramels danish toffee. Brownie biscuit dessert dessert. Pudding jelly
+                          jelly-o tart brownie jelly.
+                        </p>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--/ Add New Credit Card Modal -->
+                                              </div>
+                                              
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- / Modal -->
+                  
+              <!--/ المحتوى التدريسي -->
+            
+
 
               <!-- /Modal -->
             </div>
@@ -1837,7 +1886,7 @@
                   "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
                 },
               },
-              "searching": false, // لإزالة خاصية البحث
+              //"searching": false, // لإزالة خاصية البحث
               "lengthChange": false, // لإخفاء خيار "Table length"
               "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
               "columnDefs": [
@@ -1868,51 +1917,29 @@
 
             });
 
+
+            // البحث
             $('#searchInput').on('keyup', function () {
               table.search(this.value).draw();
             });
-
-            // Show only the Salary column
-            table.rows().every(function () {
-              this.child(format(this.data())).show();
+            // الفلاتر
+            $('#filterStatus').on('change', function () {
+              var selectedValues = $('#filterStatus').val();
+              table.column(4).search(selectedValues.join('|'), true, false).draw();
             });
-            /////////////
-            // التعامل مع ترتيب الصفوف
-            table.on('row-reorder', function (e, details, edit) {
-              var rows = table.rows().data().toArray();
-              // الحصول على ترتيب الصفوف بعد التغيير
-              var reorderedRows = rows.map(row => {
-                return row[0]; // اختيار العنصر الأول كمثال
-              });
-              // تحديث العلاقة بين الصفوف هنا
-              // يمكنك استخدام reorderedRows لتحديد وتعيين العلاقة الصحيحة بين first-row و second-row
-            });
-            /////////////
-            // التفاعل مع العنصر الجديد المخصص
+            // كمية العرض
             $('#table-length-select').on('change', function () {
               var length = $(this).val();
               table.page.len(length).draw();
             });
-            // إزالة مربع البحث
-            $(".dataTables_filter").hide();
             
 
+            // لعرض المنهاج في صف 
+            table.rows().every(function () {
+              this.child(format(this.data())).show();
+            });
+            
 
-            /*$('#filterType').on('change', function () {
-              table.column(1).search(this.value).draw();
-            });
-             $('#filterStatus').on('change', function () {
-              table.column(2).search(this.value).draw();
-            });*/
-            // التفاعل مع الفلاتر
-            $('#filterType').on('change', function () {
-              var selectedValues = $('#filterType').val();
-              table.column(1).search(selectedValues.join('|'), true, false).draw();
-            });
-            $('#filterStatus').on('change', function () {
-              var selectedValues = $('#filterStatus').val();
-              table.column(2).search(selectedValues.join('|'), true, false).draw();
-            });
           });
           function format(d) {
             if (d.seminars.trim() !== '') {
@@ -1925,6 +1952,8 @@
                 '</div>'
               );
             }
+            // إزالة مربع البحث
+            $(".dataTables_filter").hide();
           }
         </script>
 
