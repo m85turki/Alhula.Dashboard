@@ -730,11 +730,21 @@ html:not([dir=rtl]) div.card-datatable table.dataTable tbody td:first-child {
 [dir=rtl] table.dataTable.table-sm > thead > tr > th {
   padding-right: 1.25rem;
 }
+
+
 [dir=rtl] table.dataTable thead th,
-[dir=rtl] table.dataTable tbody td,
 [dir=rtl] table.dataTable tfoot th {
-  padding-right: 1.25rem;
+  padding-right: 0.65rem !important;
+  padding-left: 1.25rem;
 }
+
+[dir=rtl] table.dataTable thead th.sorting_disabled,
+[dir=rtl] table.dataTable tbody td,
+[dir=rtl] table.dataTable tfoot th.sorting_disabled {
+  padding-right: 0.65rem !important;
+  padding-left: 0.65rem;
+}
+
 [dir=rtl] table.dataTable.table-sm thead th, [dir=rtl] table.dataTable.table-sm tbody td, [dir=rtl] table.dataTable.table-sm tfoot th {
   padding-right: 1.25rem;
 }

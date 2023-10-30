@@ -178,11 +178,15 @@
 }
 
 /***/
-
+/*
 .bg-label-secondary{
   background-color: rgba(255, 255, 255, 0.75) !important;
   border-bottom: 1px solid #dbdade;
   backdrop-filter: saturate(200%) blur(6px);
+}*/
+
+.table th {
+  letter-spacing: normal;
 }
 
 .number-unicode {
@@ -228,4 +232,38 @@
 }
 .z-6 {
   z-index: 6!important;
+}
+
+.none-sort::before,
+.none-sort::after
+{
+  display: none !important;
+}
+
+tr.first-row.active > * ,
+tr.second-row.active > * {
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.075) !important;
+}
+
+table.dataTable tr.dtrg-group th {
+  background-color: rgba(224, 224, 224, 0.0) !important;
+  text-align: left;
+}
+
+.light-style table.dataTable tr.dtrg-group.dtrg-level-0 th {
+  border-color: rgba(219, 218, 222, 0.0) !important;
+}
+
+.dt-hasChild td{
+  border-bottom: none !important;
+}
+
+
+table.dataTable.table-hover > tbody > tr.dt-hasChild:hover + tr > * {
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.075) !important;
+}
+
+
+table.seminars-dt.dataTable.table-hover > tbody > tr:hover > * {
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.030) !important;
 }
