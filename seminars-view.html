@@ -842,7 +842,7 @@
                               <div class="fw-medium me-1">من:</div>
                               <div>
                                 <small>
-                                  22/12/2023
+                                  11/02/2023
                                 </small>
                               </div>
                             </div>
@@ -850,7 +850,7 @@
                               <div class="fw-medium me-1">إلى:</div>
                               <div>
                                 <small>
-                                  22/12/2023
+                                  11/02/2023
                                 </small>
                               </div>
                             </div>
@@ -882,19 +882,19 @@
 
                       <div class="row pt-3 pb-2">
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modalLong">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal">
                               <i class="ti ti-folders me-2 mt-n1"></i>
                               10 وثائق
                           </a>
                         </p>
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal">
                               <i class="ti ti-link me-2 mt-n1"></i>
                               3 روابط
                           </a>
                         </p>
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal">
                               <i class="ti ti-file-text me-2 mt-n1"></i>
                               التفاصيل
                           </a>
@@ -975,15 +975,15 @@
                   <!-- Student Seminars table -->
                   <div class="card">
                     <div class="card-header sticky-element border-bottom d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
-                      <h5 class="card-title mb-sm-0 me-2">قائمة المشرف العام</h5>
+                      <h5 class="card-title mb-sm-0 me-2">قائمة الطلاب</h5>
                       <div class="action-btns">
                         <button class="btn btn-primary"
                         type="button"
                           data-bs-toggle="offcanvas"
                           data-bs-target="#offcanvasBoth"
                           aria-controls="offcanvasBoth">
-                          <i class="ti ti-plus me-1 ti-xs"></i>
-                          إضافة مستخدم جديد
+                          <i class="ti ti-bookmark-plus ti-sm mx-1"></i>
+                          منهج جديد
                         </button>
 
 
@@ -1003,13 +1003,15 @@
                               <input type="text" id="searchInput" class="form-control" placeholder="بحث...">
                             </div>
                             <div class="col-12 col-sm-6 col-md-3">
+                              <input class="form-control" type="date" value="" id="filterDate">
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
                               <select id="filterStatus" class="selectpicker w-100" data-style="btn-default"
                               multiple
                               placeholder="الحالة">
-                              <option value="فعال">فعال</option>
-                              <option value="مكتمل">مكتمل</option>
-                              <option value="مجدول">مجدول</option>
-                              <option value="قيد الإنتظار">قيد الإنتظار</option>
+                              <option value="حاضر/ة">حاضر/ة</option>
+                              <option value="غائب/ة">غائب/ة</option>
+                              <option value="معتذر/ة">معتذر/ة</option>
                               </select>
                             </div>
                           </div>
@@ -1037,7 +1039,7 @@
                             <table  class="seminars-dt table table-hover datatables-basic">
                               <thead>
                                 <tr>
-                                  <th class="none-sort"> <input class="form-check-input" type="checkbox" value="" checked /></th>
+                                  <th class="none-sort" style="width: 18px !important;"> <input class="form-check-input" type="checkbox" value="" checked /></th>
                                   <th>إسم الطالب</th>
                                   <th>التاريخ</th>
                                   <th>المنهاج</th>
@@ -1069,10 +1071,14 @@
                                     </div>
                                   </td>
                                   <td>
-                                    22/12/2023
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
                                   </td>
                                   <td>
-                                    <div class="number-unicode d-flex flex-row">
+                                    <div class="number-unicode d-flex flex-column flex-sm-row">
                                       <div class="me-2">
                                         <span class="text-muted">
                                           من سورة البقرة آية 1
@@ -1100,7 +1106,8 @@
                                       <a href="javascript:;" class="text-body">
                                         <i class="ti ti-notes ti-sm me-1"></i>
                                       </a>
-                                      <a href="javascript:;" class="text-body delete-record">
+                                      <a href="javascript:;" class="text-body delete-record" 
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
                                         <i class="ti ti-bookmarks ti-sm mx-1"></i>
                                       </a>
 
@@ -1144,10 +1151,10 @@
                                     </div>
                                   </td>
                                   <td>
-                                    22/12/2023
+                                    2023/03/11
                                   </td>
                                   <td>
-                                    <div class="number-unicode d-flex flex-row">
+                                    <div class="number-unicode d-flex flex-column flex-sm-row">
                                       <div class="me-2">
                                         <span class="text-muted">
                                           من سورة البقرة آية 1
@@ -1175,7 +1182,7 @@
                                       <a href="javascript:;" class="text-body">
                                         <i class="ti ti-notes ti-sm me-1"></i>
                                       </a>
-                                      <a href="javascript:;" class="text-body delete-record">
+                                      <a href="javascript:;" class="text-body delete-record" data-bs-toggle="modal" data-bs-target="#reviewModal">
                                         <i class="ti ti-bookmarks ti-sm mx-1"></i>
                                       </a>
 
@@ -1219,10 +1226,10 @@
                                     </div>
                                   </td>
                                   <td>
-                                    22/12/2023
+                                    2023/01/11
                                   </td>
                                   <td>
-                                    <div class="number-unicode d-flex flex-row">
+                                    <div class="number-unicode d-flex flex-column flex-sm-row">
                                       <div class="me-2">
                                         <span class="text-muted">
                                           من سورة البقرة آية 1
@@ -1250,7 +1257,8 @@
                                       <a href="javascript:;" class="text-body">
                                         <i class="ti ti-notes ti-sm me-1"></i>
                                       </a>
-                                      <a href="javascript:;" class="text-body delete-record">
+                                      <a href="javascript:;" class="text-body delete-record" 
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
                                         <i class="ti ti-bookmarks ti-sm mx-1"></i>
                                       </a>
 
@@ -1293,13 +1301,15 @@
                                       </div>
                                     </div>
                                   </td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                                  <td class="d-none d-md-table-cell"></td>
+                                  <td class="d-none d-md-table-cell"></td>
+                                  <td class="d-none d-md-table-cell"></td>
+                                  <td class="d-none d-md-table-cell"></td>
                                   <td>
                                     <span class="text-muted">
-                                      <a class="text-body text-nowrap" href="javascript:void(0);">
+                                      <a class="text-body text-nowrap"
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasBoth" aria-controls="offcanvasBoth"
+                                      href="javascript:void(0);">
                                         <i class="ti ti-bookmark-plus ti-sm mx-1"></i>
                                       </a>
                                     </span>
@@ -1326,13 +1336,15 @@
                                       </div>
                                     </div>
                                   </td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                                  <td class="d-none d-md-table-cell"></td>
+                                  <td class="d-none d-md-table-cell"></td>
+                                  <td class="d-none d-md-table-cell"></td>
+                                  <td class="d-none d-md-table-cell"></td>
                                   <td>
                                     <span class="text-muted">
-                                      <a class="text-body text-nowrap" href="javascript:void(0);">
+                                      <a class="text-body text-nowrap"
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasBoth" aria-controls="offcanvasBoth"
+                                      href="javascript:void(0);">
                                         <i class="ti ti-bookmark-plus ti-sm mx-1"></i>
                                       </a>
                                     </span>
@@ -1361,266 +1373,312 @@
               </div>
 
               <!-- Modal -->
-              <!-- Edit User Modal -->
-              <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-simple modal-edit-user">
-                  <div class="modal-content p-3 p-md-5">
-                    <div class="modal-body">
+              <!-- المحتوى التدريسي -->              
+              <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalLongTitle">المحتوى التدريسي</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      <div class="text-center mb-4">
-                        <h3 class="mb-2">Edit User Information</h3>
-                        <p class="text-muted">Updating user details will receive a privacy audit.</p>
-                      </div>
-                      <form id="editUserForm" class="row g-3" onsubmit="return false">
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserFirstName">First Name</label>
-                          <input
-                            type="text"
-                            id="modalEditUserFirstName"
-                            name="modalEditUserFirstName"
-                            class="form-control"
-                            placeholder="John" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserLastName">Last Name</label>
-                          <input
-                            type="text"
-                            id="modalEditUserLastName"
-                            name="modalEditUserLastName"
-                            class="form-control"
-                            placeholder="Doe" />
-                        </div>
-                        <div class="col-12">
-                          <label class="form-label" for="modalEditUserName">Username</label>
-                          <input
-                            type="text"
-                            id="modalEditUserName"
-                            name="modalEditUserName"
-                            class="form-control"
-                            placeholder="john.doe.007" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserEmail">Email</label>
-                          <input
-                            type="text"
-                            id="modalEditUserEmail"
-                            name="modalEditUserEmail"
-                            class="form-control"
-                            placeholder="example@domain.com" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserStatus">Status</label>
-                          <select
-                            id="modalEditUserStatus"
-                            name="modalEditUserStatus"
-                            class="select2 form-select"
-                            aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Active</option>
-                            <option value="2">Inactive</option>
-                            <option value="3">Suspended</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditTaxID">Tax ID</label>
-                          <input
-                            type="text"
-                            id="modalEditTaxID"
-                            name="modalEditTaxID"
-                            class="form-control modal-edit-tax-id"
-                            placeholder="123 456 7890" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserPhone">Phone Number</label>
-                          <div class="input-group">
-                            <span class="input-group-text">US (+1)</span>
-                            <input
-                              type="text"
-                              id="modalEditUserPhone"
-                              name="modalEditUserPhone"
-                              class="form-control phone-number-mask"
-                              placeholder="202 555 0111" />
+                    </div>
+                    <div class="modal-body">
+                      <div class="nav-align-left mb-4">
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="nav-item">
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                              data-bs-target="#navs-left-home" aria-controls="navs-left-home" aria-selected="true">
+                              وثائق
+                            </button>
+                          </li>
+                          <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-left-profile"
+                              aria-controls="navs-left-profile" aria-selected="false">
+                              روابط
+                            </button>
+                          </li>
+                          <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                              data-bs-target="#navs-left-messages" aria-controls="navs-left-messages" aria-selected="false">
+                              التفاصيل
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane fade show active" id="navs-left-home">
+                            <p>
+                              Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
+                              powder. Bear claw candy topping.
+                            </p>
+                            <p class="mb-0">
+                              Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
+                              jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
+                              jujubes sweet.
+                            </p>
+                          </div>
+                          <div class="tab-pane fade" id="navs-left-profile">
+                            <p>
+                              Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice
+                              cream. Gummies halvah tootsie roll muffin biscuit icing dessert gingerbread. Pastry ice cream
+                              cheesecake fruitcake.
+                            </p>
+                            <p class="mb-0">
+                              Jelly-o jelly beans icing pastry cake cake lemon drops. Muffin muffin pie tiramisu halvah
+                              cotton candy liquorice caramels.
+                            </p>
+                          </div>
+                          <div class="tab-pane fade" id="navs-left-messages">
+                            <p>
+                              Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies
+                              cupcake gummi bears cake chocolate.
+                            </p>
+                            <p class="mb-0">
+                              Cake chocolate bar cotton candy apple pie tootsie roll ice cream apple pie brownie cake. Sweet
+                              roll icing sesame snaps caramels danish toffee. Brownie biscuit dessert dessert. Pudding jelly
+                              jelly-o tart brownie jelly.
+                            </p>
                           </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserLanguage">Language</label>
-                          <select
-                            id="modalEditUserLanguage"
-                            name="modalEditUserLanguage"
-                            class="select2 form-select"
-                            multiple>
-                            <option value="">Select</option>
-                            <option value="english" selected>English</option>
-                            <option value="spanish">Spanish</option>
-                            <option value="french">French</option>
-                            <option value="german">German</option>
-                            <option value="dutch">Dutch</option>
-                            <option value="hebrew">Hebrew</option>
-                            <option value="sanskrit">Sanskrit</option>
-                            <option value="hindi">Hindi</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label class="form-label" for="modalEditUserCountry">Country</label>
-                          <select
-                            id="modalEditUserCountry"
-                            name="modalEditUserCountry"
-                            class="select2 form-select"
-                            data-allow-clear="true">
-                            <option value="">Select</option>
-                            <option value="Australia">Australia</option>
-                            <option value="Bangladesh">Bangladesh</option>
-                            <option value="Belarus">Belarus</option>
-                            <option value="Brazil">Brazil</option>
-                            <option value="Canada">Canada</option>
-                            <option value="China">China</option>
-                            <option value="France">France</option>
-                            <option value="Germany">Germany</option>
-                            <option value="India">India</option>
-                            <option value="Indonesia">Indonesia</option>
-                            <option value="Israel">Israel</option>
-                            <option value="Italy">Italy</option>
-                            <option value="Japan">Japan</option>
-                            <option value="Korea">Korea, Republic of</option>
-                            <option value="Mexico">Mexico</option>
-                            <option value="Philippines">Philippines</option>
-                            <option value="Russia">Russian Federation</option>
-                            <option value="South Africa">South Africa</option>
-                            <option value="Thailand">Thailand</option>
-                            <option value="Turkey">Turkey</option>
-                            <option value="Ukraine">Ukraine</option>
-                            <option value="United Arab Emirates">United Arab Emirates</option>
-                            <option value="United Kingdom">United Kingdom</option>
-                            <option value="United States">United States</option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label class="switch">
-                            <input type="checkbox" class="switch-input" />
-                            <span class="switch-toggle-slider">
-                              <span class="switch-on"></span>
-                              <span class="switch-off"></span>
-                            </span>
-                            <span class="switch-label">Use as a billing address?</span>
-                          </label>
-                        </div>
-                        <div class="col-12 text-center">
-                          <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
-                          <button
-                            type="reset"
-                            class="btn btn-label-secondary"
-                            data-bs-dismiss="modal"
-                            aria-label="Close">
-                            Cancel
-                          </button>
-                        </div>
-                      </form>
+                      </div>
                     </div>
+              
                   </div>
                 </div>
-              </div>
-              <!--/ Edit User Modal -->
-              
-              <!-- المحتوى التدريسي -->
-                                        <!-- Modal -->
+              </div>              
+              <!--/ المحتوى التدريسي -->
+            
+              <!-- Review Modal -->
+              <div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalLongTitle">المحتوى التدريسي</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class=" mb-4">
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                              data-bs-target="#navs-notes" aria-controls="navs-notes" aria-selected="true">
+                              ملاحظات
+                            </button>
+                          </li>
+                          <li class="nav-item">
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-review"
+                              aria-controls="navs-review" aria-selected="false">
+                              مراجعات
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="tab-content p-0">
+                          <div class="tab-pane fade" id="navs-notes">
+                            <p>
+                              Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
+                              powder. Bear claw candy topping.
+                            </p>
+                            <p class="mb-0">
+                              Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
+                              jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
+                              jujubes sweet.
+                            </p>
+                          </div>
+                          <div class="tab-pane fade show active" id="navs-review">
+                            
+                            <!--/ Review table -->
+                                              <!-- Student Seminars table -->
+                  <div class="card bg-none shadow-none">
+                    <div class="card-header sticky-element border-bottom d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
+                      <h5 class="card-title mb-sm-0 me-2">قائمة المراجعات</h5>
+                      <div class="action-btns">
+                        <button class="btn btn-primary"
+                        type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                          <i class="ti ti-bookmarks ti-sm mx-1"></i>
+                          إضافة مراجعة
+                        </button>
+
+
+                        
+
+                      </div>
+                    </div>
+
+
+                    <div class="row z-1 position-relative">
+                      <div class="col-12">
+                        <!-- Account -->
+                        <div class="card-body">
                           
-                                        <div class="modal fade" id="modalLong" tabindex="-1" aria-hidden="true">
-                                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                              <div class="modal-header">
-                                                <h5 class="modal-title" id="modalLongTitle">المحتوى التدريسي</h5>
-                                                <button
-                                                  type="button"
-                                                  class="btn-close"
-                                                  data-bs-dismiss="modal"
-                                                  aria-label="Close"></button>
-                                              </div>
-                                              <div class="modal-body">
-                  <div class="nav-align-left mb-4">
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <button
-                          type="button"
-                          class="nav-link active"
-                          role="tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#navs-left-home"
-                          aria-controls="navs-left-home"
-                          aria-selected="true">
-                          وثائق
-                        </button>
-                      </li>
-                      <li class="nav-item">
-                        <button
-                          type="button"
-                          class="nav-link"
-                          role="tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#navs-left-profile"
-                          aria-controls="navs-left-profile"
-                          aria-selected="false">
-                          روابط
-                        </button>
-                      </li>
-                      <li class="nav-item">
-                        <button
-                          type="button"
-                          class="nav-link"
-                          role="tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#navs-left-messages"
-                          aria-controls="navs-left-messages"
-                          aria-selected="false">
-                          التفاصيل
-                        </button>
-                      </li>
-                    </ul>
-                    <div class="tab-content">
-                      <div class="tab-pane fade show active" id="navs-left-home">
-                        <p>
-                          Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
-                          powder. Bear claw candy topping.
-                        </p>
-                        <p class="mb-0">
-                          Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
-                          jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
-                          jujubes sweet.
-                        </p>
-                      </div>
-                      <div class="tab-pane fade" id="navs-left-profile">
-                        <p>
-                          Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice
-                          cream. Gummies halvah tootsie roll muffin biscuit icing dessert gingerbread. Pastry ice cream
-                          cheesecake fruitcake.
-                        </p>
-                        <p class="mb-0">
-                          Jelly-o jelly beans icing pastry cake cake lemon drops. Muffin muffin pie tiramisu halvah
-                          cotton candy liquorice caramels.
-                        </p>
-                      </div>
-                      <div class="tab-pane fade" id="navs-left-messages">
-                        <p>
-                          Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies
-                          cupcake gummi bears cake chocolate.
-                        </p>
-                        <p class="mb-0">
-                          Cake chocolate bar cotton candy apple pie tootsie roll ice cream apple pie brownie cake. Sweet
-                          roll icing sesame snaps caramels danish toffee. Brownie biscuit dessert dessert. Pudding jelly
-                          jelly-o tart brownie jelly.
-                        </p>
+
+                          <div class="table-responsive tbl-responsive">
+
+                            <table  class="reviews-dt table table-hover datatables-basic">
+                              <thead>
+                                <tr>
+                                  <th>التاريخ</th>
+                                  <th>المنهاج</th>
+                                  <th>التقييم</th>
+                                  <th style="width: 1%;">الاجراءات</th>
+                                </tr>
+                              </thead>
+                              <tbody class="table-border-bottom-0 myTable">
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode d-flex flex-column flex-sm-row">
+                                      <div class="me-2">
+                                        <span class="text-muted">
+                                          من سورة البقرة آية 1
+                                        </span>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          إلى سورة البقرة آية 20
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <span class="">
+                                          50
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body delete-record" 
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                                        <i class="ti ti-edit ti-sm mx-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-trash ti-sm me-1"></i>
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode d-flex flex-column flex-sm-row">
+                                      <div class="me-2">
+                                        <span class="text-muted">
+                                          من سورة البقرة آية 1
+                                        </span>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          إلى سورة البقرة آية 20
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <span class="">
+                                          50
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body delete-record" 
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                                        <i class="ti ti-edit ti-sm mx-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-trash ti-sm me-1"></i>
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode d-flex flex-column flex-sm-row">
+                                      <div class="me-2">
+                                        <span class="text-muted">
+                                          من سورة البقرة آية 1
+                                        </span>
+                                      </div>
+                                      <div>
+                                        <span>
+                                          إلى سورة البقرة آية 20
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div>
+                                        <span class="">
+                                          50
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body delete-record" 
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                                        <i class="ti ti-edit ti-sm mx-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-trash ti-sm me-1"></i>
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                          </div>
+
+                         
+          
+
+
+                        </div>
+                        <!-- /Account -->
                       </div>
                     </div>
                   </div>
-                                              </div>
-                                              
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- / Modal -->
-                  
-              <!--/ المحتوى التدريسي -->
-            
 
+                  <!-- / Student Seminars table -->
+
+                            <!--/ Review table -->
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>  
+              <!--/ Review Modal -->
 
               <!-- /Modal -->
             </div>
@@ -1667,141 +1725,262 @@
         <!-- Offcanvas -->
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
           <div class="offcanvas-header">
-            <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة مستخدم جديد</h5>
+            <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة منهاج جديد</h5>
             <button
               type="button"
               class="btn-close text-reset"
               data-bs-dismiss="offcanvas"
               aria-label="Close"></button>
           </div>
+          <div class="offcanvas-body vertical-example mx-0 flex-grow-0 py-0">
+            <div class="d-flex flex-row">
+                <span class="text-muted me-2">الطالب:</span>
+                <span class="">
+                  محمد تركي أبو الترك
+                </span>
+          </div>
+          </div>
           <div class="offcanvas-body vertical-example my-auto mx-0 flex-grow-0">
             <div class="row">
               <div class="col-lg-12">
                 <!-- 1. Delivery Address -->
-                <h5 class="mb-3">1. نوع العضوية</h5>
                 <div class="row g-3 mb-4">
                   
                   <!-- Basic -->
                  
                   <div class="col-md-6">
-                    <label class="form-label" for="">نوع العضوية</label>
-                    <select id="" class="selectpicker w-100" data-style="btn-default"
-                    placeholder="إختر نوع العضوية">
-                      <option>إختر</option>
-                      <option>إختر</option>
+                    <label class="form-label" for="">إختر إلى سورة القرآن</label>
+                    <select
+                    id="" class="selectpicker w-100"
+                    data-style="btn-default"
+                    data-live-search="true"
+                    placeholder="إختر السورة">
+                      <option>الفاتحة</option>
+                      <option>البقرة</option>
+                      <option>آل عمران</option>
                     </select>
                   </div>
       
                   <div class="col-md-6">
-                    <label for="" class="form-label">نوع الحلقة</label>
+                    <label for="" class="form-label">إلى اية</label>
                     <select
                       id=""
                       class="selectpicker w-100"
-                      multiple
                       data-style="btn-default"
                       data-live-search="true"
-                      placeholder="حدد نوع الحلقة"
+                      placeholder="حدد الآية"
                       >
-                      <option>نوع الحلقة-1</option>
-                      <option>نوع الحلقة-2</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
                     </select>
                   </div>
-                  <div class="col-md-6 d-flex align-items-end ">
-                    <div class="form-check form-switch mb-2">
-                      <input class="form-check-input" type="checkbox" id="" />
-                      <label class="form-check-label" for="">فعال</label>
-                    </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="">إختر من سورة القرآن</label>
+                    <select
+                    id="" class="selectpicker w-100"
+                    data-style="btn-default"
+                    data-live-search="true"
+                    placeholder="إختر السورة">
+                    <option>الفاتحة</option>
+                    <option>البقرة</option>
+                    <option>آل عمران</option>
+                  </select>
                   </div>
+      
+                  <div class="col-md-6">
+                    <label for="" class="form-label">من اية</label>
+                    <select
+                      id=""
+                      class="selectpicker w-100"
+                      data-style="btn-default"
+                      data-live-search="true"
+                      placeholder="حدد الآية"
+                      >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                  </div>
+                  
                   <hr>
+
+                  <div class="col-md-6">
+                    <label for="" class="form-label">التقييم</label>
+                    <input class="form-control" type="number" value="18">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="" class="form-label">حالة الحضور</label>
+                    <select
+                      id=""
+                      class="selectpicker w-100"
+                      data-style="btn-default"
+                      placeholder="حالة الحضور"
+                      >
+                      <option>حاضر/ة</option>
+                      <option>غائب/ة</option>
+                      <option>معتذر/ة</option>
+                    </select>
+                  </div>
       
               </div>
-                <h5 class="mb-3">2. المعلومات الأساسية</h5>
-                <div class="row g-3 mb-4">
-                  
-                  <!-- Basic -->
-                  <div class="col-md-12">
-                    <label class="form-label" for="">الإسم الكامل</label>
-                    <input type="text" id="" class="form-control" placeholder="الاسم الرباعي" />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="">الجنس</label>
-                    <select id="" class="selectpicker w-100" data-style="btn-default"
-                    placeholder="إختر">
-                      <option>ذكر</option>
-                      <option>أنثى</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="">البريد الالكتروني</label>
-                    <div class="input-group input-group-merge">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id=""
-                        name="email"
-                        placeholder="البريد الالكتروني"
-                        aria-label="البريد الالكتروني" />
-                      
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="">رقم الهاتف</label>
-                    <input
-                      type="text"
-                      id=""
-                      class="form-control phone-mask"
-                      placeholder="658 799 8941"
-                      aria-label="658 799 8941" />
-                  </div>
-                  <hr>
-                </div>
       
-                <h5 class="mb-3">3. العنوان</h5>
                   <div class="row g-3 mb-4">
-                  <div class="col-md-6">
-                    <label for="" class="form-label">الدولة</label>
-                    <select
-                      id=""
-                      class="selectpicker w-100"
-                      data-style="btn-default"
-                      data-live-search="true"
-                      placeholder="حدد الدولة">
-                      <option>اسم الدولة</option>
-                      <option>اسم الدولة</option>
-                    </select>
-                  </div>
       
-                  <div class="col-md-6">
-                    <label for="" class="form-label">المدينة</label>
-                    <select
-                      id=""
-                      class="selectpicker w-100"
-                      data-style="btn-default"
-                      data-live-search="true"
-                      placeholder="إختر المدينة"
-                      >
-                      <option>اسم المدينة</option>
-                      <option>اسم المدينة</option>
-                    </select>
-                  </div>
                   <div class="col-12">
-                    <label class="form-label" for="">العنوان</label>
+                    <label class="form-label" for="">ملاحظات</label>
                     <textarea
                       name="address"
                       class="form-control"
                       id=""
                       rows="2"
-                      placeholder="حدد العنوان"></textarea>
+                      placeholder="ملاحظات"></textarea>
                   </div>
                   
-      
-      
                   <hr>
+
                   <div class="col-12 action-btns">
-                    <button class="btn btn-label-primary me-3 waves-effect">
+                    <button class="btn btn-label-primary me-3 waves-effect" data-bs-dismiss="offcanvas" aria-label="Close">
                       <span class="align-middle">إلغاء</span>
                     </button>
-                    <button class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    <button class="btn btn-primary waves-effect waves-light">إضافة</button>
+                  </div>
+      
+      
+              </div>
+            </div>
+          </div>
+      
+          </div>
+        </div>
+      
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasReviews" aria-labelledby="offcanvasReviewsLabel">
+          <div class="offcanvas-header">
+              <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة مراجعة</h5>
+
+              <button
+                type="button"
+                class="btn-close text-reset mt-1"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body vertical-example mx-0 flex-grow-0 py-0">
+            <div class="d-flex flex-row">
+                <span class="text-muted me-2">الطالب:</span>
+                <span class="">
+                  محمد تركي أبو الترك
+                </span>
+          </div>
+          </div>
+
+          <div class="offcanvas-body vertical-example my-auto mx-0 flex-grow-0">
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- 1. Delivery Address -->
+                <div class="row g-3 mb-4">
+                  
+                  <!-- Basic -->
+                 
+                  <div class="col-md-6">
+                    <label class="form-label" for="">إختر إلى سورة القرآن</label>
+                    <select
+                    id="" class="selectpicker w-100"
+                    data-style="btn-default"
+                    data-live-search="true"
+                    placeholder="إختر السورة">
+                      <option>الفاتحة</option>
+                      <option>البقرة</option>
+                      <option>آل عمران</option>
+                    </select>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="" class="form-label">إلى اية</label>
+                    <select
+                      id=""
+                      class="selectpicker w-100"
+                      data-style="btn-default"
+                      data-live-search="true"
+                      placeholder="حدد الآية"
+                      >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="">إختر من سورة القرآن</label>
+                    <select
+                    id="" class="selectpicker w-100"
+                    data-style="btn-default"
+                    data-live-search="true"
+                    placeholder="إختر السورة">
+                    <option>الفاتحة</option>
+                    <option>البقرة</option>
+                    <option>آل عمران</option>
+                  </select>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="" class="form-label">من اية</label>
+                    <select
+                      id=""
+                      class="selectpicker w-100"
+                      data-style="btn-default"
+                      data-live-search="true"
+                      placeholder="حدد الآية"
+                      >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                  </div>
+                  
+                  <hr>
+
+                  <div class="col-md-12">
+                    <label for="" class="form-label">التقييم</label>
+                    <input class="form-control" type="number" value="18">
+                  </div>
+              </div>
+      
+                  <div class="row g-3 mb-4">
+                  <div class="col-12 action-btns">
+                    <button class="btn btn-label-primary me-3 waves-effect" data-bs-dismiss="offcanvas" aria-label="Close">
+                      <span class="align-middle">إلغاء</span>
+                    </button>
+                    <button class="btn btn-primary waves-effect waves-light">إضافة</button>
                   </div>
       
       
@@ -1944,7 +2123,7 @@
           function format(d) {
             if (d.seminars.trim() !== '') {
               return (
-                '<div class="d-flex flex-row">' +
+                '<div class="d-flex flex-row ms-0 ms-md-5">' +
                 '<span class="me-2">المنهاج:</span>' +
                 '<span>' +
                 d.seminars +
@@ -1956,6 +2135,67 @@
             $(".dataTables_filter").hide();
           }
         </script>
+
+        <script>
+          $(document).ready(function () {
+            var table = $('.reviews-dt').DataTable({
+              "language": {
+                "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+                "sInfo": "عرض _START_ إلى _END_ من أصل _TOTAL_ مُدخل",
+                "sInfoEmpty": "عرض 0 إلى 0 من أصل 0 مُدخل",
+                "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "عرض _MENU_ مُدخل",
+                "sLoadingRecords": "جارٍ التحميل...",
+                "sProcessing": "جارٍ المعالجة...",
+                "sSearch": "بحث:",
+                "sZeroRecords": "لم يتم العثور على أية سجلات مطابقة",
+                "oPaginate": {
+                  "sFirst": "الأول",
+                  "sPrevious": "السابق",
+                  "sNext": "التالي",
+                  "sLast": "الأخير"
+                },
+                
+                "oAria": {
+                  "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+                  "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+                },
+              },
+              //"searching": false, // لإزالة خاصية البحث
+              "lengthChange": false, // لإخفاء خيار "Table length"
+              "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
+              "columnDefs": [
+                {
+                  //"targets": -1, // العمود الأخير (العمود الذي يحتوي على الإجراءات)
+                  "targets": [0, -1], // العواميد الأول والأخير والقبل الأخير
+                  "orderable": false // إزالة إمكانية الترتيب
+                },
+                {
+                  "targets": 0,
+                  "orderable": false // لإزالة القدرة على الترتيب من العمود الأول
+                }
+              ],
+            });
+
+          });
+          
+        </script>
+
+<script>
+  // Get the input element by its ID
+  const dateInput = document.getElementById('dateInput');
+
+  // Create a new Date object to get the current date
+  const currentDate = new Date();
+
+  // Format the date to the string required by the input type 'date' (YYYY-MM-DD)
+  const formattedDate = currentDate.toISOString().slice(0, 10);
+
+  // Set the value of the input to the current date
+  dateInput.value = formattedDate;
+</script>
 
 
 
