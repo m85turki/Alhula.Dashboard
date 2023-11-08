@@ -1044,8 +1044,8 @@
                                   <th>التاريخ</th>
                                   <th>المنهاج</th>
                                   <th>الحالة</th>
-                                  <th>التقييم</th>
-                                  <th style="width: 1%;">الاجراءات</th>
+                                  <th class="slim-col">التقيم</th>
+                                  <th class="slim-col">الاجراءات</th>
                                 </tr>
                               </thead>
                               <tbody class="table-border-bottom-0 myTable">
@@ -1108,12 +1108,12 @@
                                       </a>
                                       <a href="javascript:;" class="text-body delete-record" 
                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
-                                        <i class="ti ti-bookmarks ti-sm mx-1"></i>
+                                        <i class="ti ti-bookmarks ti-sm"></i>
                                       </a>
 
                                       <div class="dropdown">
                                         <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                          <i class="ti ti-dots-vertical ti-sm"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
                                           <a class="dropdown-item" href="javascript:void(0);" >
@@ -1182,13 +1182,13 @@
                                       <a href="javascript:;" class="text-body">
                                         <i class="ti ti-notes ti-sm me-1"></i>
                                       </a>
-                                      <a href="javascript:;" class="text-body delete-record" data-bs-toggle="modal" data-bs-target="#reviewModal">
-                                        <i class="ti ti-bookmarks ti-sm mx-1"></i>
+                                      <a href="javascript:;" class="text-body delete-record text-nowrap" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                        <i class="ti ti-bookmarks ti-sm"></i> 3
                                       </a>
 
                                       <div class="dropdown">
                                         <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                          <i class="ti ti-dots-vertical ti-sm"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
                                           <a class="dropdown-item" href="javascript:void(0);" >
@@ -1259,12 +1259,12 @@
                                       </a>
                                       <a href="javascript:;" class="text-body delete-record" 
                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
-                                        <i class="ti ti-bookmarks ti-sm mx-1"></i>
+                                        <i class="ti ti-bookmarks ti-sm"></i>
                                       </a>
 
                                       <div class="dropdown">
                                         <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                          <i class="ti ti-dots-vertical ti-sm"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
                                           <a class="dropdown-item" href="javascript:void(0);" >
@@ -1471,7 +1471,7 @@
                           </li>
                         </ul>
                         <div class="tab-content p-0">
-                          <div class="tab-pane fade" id="navs-notes">
+                          <div class="tab-pane fade p-3" id="navs-notes">
                             <p>
                               Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
                               powder. Bear claw candy topping.
@@ -1493,7 +1493,7 @@
                         <button class="btn btn-primary"
                         type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
-                          <i class="ti ti-bookmarks ti-sm mx-1"></i>
+                          <i class="ti ti-bookmarks ti-sm"></i>
                           إضافة مراجعة
                         </button>
 
@@ -1507,7 +1507,7 @@
                     <div class="row z-1 position-relative">
                       <div class="col-12">
                         <!-- Account -->
-                        <div class="card-body">
+                        <div class="card-body p-0">
                           
 
                           <div class="table-responsive tbl-responsive">
@@ -1517,8 +1517,8 @@
                                 <tr>
                                   <th>التاريخ</th>
                                   <th>المنهاج</th>
-                                  <th>التقييم</th>
-                                  <th style="width: 1%;">الاجراءات</th>
+                                  <th class="slim-col">التقيم</th>
+                                  <th class="slim-col">الاجراءات</th>
                                 </tr>
                               </thead>
                               <tbody class="table-border-bottom-0 myTable">
@@ -1821,8 +1821,15 @@
                   <hr>
 
                   <div class="col-md-6">
-                    <label for="" class="form-label">التقييم</label>
-                    <input class="form-control" type="number" value="18">
+                    <label for="" class="form-label">التقيم</label>
+                    <div class="input-group input-group-merge">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="100"
+                        aria-label="Amount (to the nearest dollar)" />
+                      <span class="input-group-text">/ 50</span>
+                    </div>
                   </div>
                   <div class="col-md-6">
                     <label for="" class="form-label">حالة الحضور</label>
@@ -1970,8 +1977,15 @@
                   <hr>
 
                   <div class="col-md-12">
-                    <label for="" class="form-label">التقييم</label>
-                    <input class="form-control" type="number" value="18">
+                    <label for="" class="form-label">التقيم</label>
+                    <div class="input-group input-group-merge">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="100"
+                        aria-label="Amount (to the nearest dollar)" />
+                      <span class="input-group-text">/ 50</span>
+                    </div>
                   </div>
               </div>
       
@@ -2163,7 +2177,7 @@
                   "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
                 },
               },
-              //"searching": false, // لإزالة خاصية البحث
+              "searching": false, // لإزالة خاصية البحث
               "lengthChange": false, // لإخفاء خيار "Table length"
               "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
               "columnDefs": [
@@ -2178,9 +2192,7 @@
                 }
               ],
             });
-
           });
-          
         </script>
 
 <script>

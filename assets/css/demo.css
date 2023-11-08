@@ -267,3 +267,15 @@ table.dataTable.table-hover > tbody > tr.dt-hasChild:hover + tr > * {
 table.seminars-dt.dataTable.table-hover > tbody > tr:hover > * {
   box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.030) !important;
 }
+
+.slim-col{
+  width: 1% !important;
+}
+
+.offcanvas-backdrop {
+  z-index: 1090;
+}
+
+.offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
+  --bs-offcanvas-zindex: 1091;
+}
