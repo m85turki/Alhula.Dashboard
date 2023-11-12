@@ -284,3 +284,12 @@ span.note-number{
   display: inline-block;
   margin-right: -5px;
 }
+
+td.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%; /* Extend the cell as much as possible */
+  max-width: 0; /* Avoid resizing beyond table width */
+  min-width: calc(100% - 21px);
+}
