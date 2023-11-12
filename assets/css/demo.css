@@ -279,3 +279,8 @@ table.seminars-dt.dataTable.table-hover > tbody > tr:hover > * {
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --bs-offcanvas-zindex: 1091;
 }
+
+span.note-number{
+  display: inline-block;
+  margin-right: -5px;
+}

@@ -882,19 +882,19 @@
 
                       <div class="row pt-3 pb-2">
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal" data-bs-tab="documents-tab">
                               <i class="ti ti-folders me-2 mt-n1"></i>
                               10 وثائق
                           </a>
                         </p>
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal" data-bs-tab="links-tab">
                               <i class="ti ti-link me-2 mt-n1"></i>
                               3 روابط
                           </a>
                         </p>
                         <p class="col-auto ">
-                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal">
+                          <a class="text-body d-flex align-items-center" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#detailsModal" data-bs-tab="details-tab">
                               <i class="ti ti-file-text me-2 mt-n1"></i>
                               التفاصيل
                           </a>
@@ -1036,7 +1036,7 @@
 
                           <div class="table-responsive tbl-responsive">
 
-                            <table  class="seminars-dt table table-hover datatables-basic">
+                            <table id="seminars-dt" class="table table-hover datatables-basic">
                               <thead>
                                 <tr>
                                   <th class="none-sort" style="width: 18px !important;"> <input class="form-check-input" type="checkbox" value="" checked /></th>
@@ -1103,14 +1103,22 @@
                                   </td>
                                   <td>
                                     <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-notes ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record" 
-                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                                      <a href="javascript:;" class="text-body delete-record text-nowrap me-1" data-bs-toggle="modal" data-bs-target="#reviewModal" data-bs-tab="review-tab">
                                         <i class="ti ti-bookmarks ti-sm"></i>
+                                        <span class="note-number">3</span>
+                                      </a>
+                                      <a href="javascript:;" class="text-body" data-bs-toggle="modal" data-bs-target="#reviewModal" data-bs-tab="notes-tab">
+                                        <i class="ti ti-notes ti-sm"></i>
                                       </a>
 
+                                                        
+
+                                       <div>
+  
+
+    
+  </div>
+                                  
                                       <div class="dropdown">
                                         <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                           <i class="ti ti-dots-vertical ti-sm"></i>
@@ -1151,7 +1159,11 @@
                                     </div>
                                   </td>
                                   <td>
-                                    2023/03/11
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="number-unicode d-flex flex-column flex-sm-row">
@@ -1179,13 +1191,22 @@
                                   </td>
                                   <td>
                                     <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-notes ti-sm me-1"></i>
+                                      <a href="javascript:;" class="text-body delete-record text-nowrap me-1" data-bs-toggle="modal" data-bs-target="#reviewModal" data-bs-tab="review-tab">
+                                        <i class="ti ti-bookmarks ti-sm"></i>
+                                        <span class="note-number">3</span>
                                       </a>
-                                      <a href="javascript:;" class="text-body delete-record text-nowrap" data-bs-toggle="modal" data-bs-target="#reviewModal">
-                                        <i class="ti ti-bookmarks ti-sm"></i> 3
+                                      <a href="javascript:;" class="text-body" data-bs-toggle="modal" data-bs-target="#reviewModal" data-bs-tab="notes-tab">
+                                        <i class="ti ti-notes ti-sm"></i>
                                       </a>
 
+                                                        
+
+                                       <div>
+  
+
+    
+  </div>
+                                  
                                       <div class="dropdown">
                                         <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                           <i class="ti ti-dots-vertical ti-sm"></i>
@@ -1226,7 +1247,11 @@
                                     </div>
                                   </td>
                                   <td>
-                                    2023/01/11
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="number-unicode d-flex flex-column flex-sm-row">
@@ -1254,14 +1279,22 @@
                                   </td>
                                   <td>
                                     <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-notes ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record" 
-                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                                      <a href="javascript:;" class="text-body delete-record text-nowrap me-1" data-bs-toggle="modal" data-bs-target="#reviewModal" data-bs-tab="review-tab">
                                         <i class="ti ti-bookmarks ti-sm"></i>
+                                        <span class="note-number">3</span>
+                                      </a>
+                                      <a href="javascript:;" class="text-body" data-bs-toggle="modal" data-bs-target="#reviewModal" data-bs-tab="notes-tab">
+                                        <i class="ti ti-notes ti-sm"></i>
                                       </a>
 
+                                                        
+
+                                       <div>
+  
+
+    
+  </div>
+                                  
                                       <div class="dropdown">
                                         <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                           <i class="ti ti-dots-vertical ti-sm"></i>
@@ -1385,56 +1418,349 @@
                       <div class="nav-align-left mb-4">
                         <ul class="nav nav-tabs" role="tablist">
                           <li class="nav-item">
-                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                              data-bs-target="#navs-left-home" aria-controls="navs-left-home" aria-selected="true">
+                            <button type="button" class="nav-link active" id="documents-tabnav" role="tab" data-bs-toggle="tab"
+                            data-bs-target="#documents-tab" aria-controls="documents-tab-pane" aria-selected="true">
                               وثائق
                             </button>
                           </li>
                           <li class="nav-item">
-                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-left-profile"
-                              aria-controls="navs-left-profile" aria-selected="false">
-                              روابط
+                            <button type="button" class="nav-link" id="links-tabnav" role="tab" data-bs-toggle="tab"
+                            data-bs-target="#links-tab" aria-controls="links-tab-pane" aria-selected="true">
+                            روابط
                             </button>
                           </li>
                           <li class="nav-item">
-                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                              data-bs-target="#navs-left-messages" aria-controls="navs-left-messages" aria-selected="false">
-                              التفاصيل
+                            <button type="button" class="nav-link" id="details-tabnav" role="tab" data-bs-toggle="tab"
+                            data-bs-target="#details-tab" aria-controls="details-tab-pane" aria-selected="true">
+                            التفاصيل
                             </button>
                           </li>
                         </ul>
-                        <div class="tab-content">
-                          <div class="tab-pane fade show active" id="navs-left-home">
-                            <p>
-                              Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
-                              powder. Bear claw candy topping.
-                            </p>
-                            <p class="mb-0">
-                              Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
-                              jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
-                              jujubes sweet.
-                            </p>
+                        <div class="tab-content pe-0 py-0">
+                          <div class="tab-pane fade show active" id="documents-tab" role="tabpanel" aria-labelledby="documents-tab" tabindex="0">
+                            <table  class="reviews-dt table table-hover datatables-basic">
+                              <thead>
+                                <tr>
+                                  <th>اسم الملف</th>
+                                  <th>التاريخ</th>
+                                  <th class="slim-col">الاجراءات</th>
+                                </tr>
+                              </thead>
+                              <tbody class="table-border-bottom-0 myTable">
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">alfatiha.pdf</span>
+                                        </a>
+                                        <small class="text-muted">120KB</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">alfatiha.pdf</span>
+                                        </a>
+                                        <small class="text-muted">120KB</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">alfatiha.pdf</span>
+                                        </a>
+                                        <small class="text-muted">120KB</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">alfatiha.pdf</span>
+                                        </a>
+                                        <small class="text-muted">120KB</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+
                           </div>
-                          <div class="tab-pane fade" id="navs-left-profile">
-                            <p>
-                              Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice
-                              cream. Gummies halvah tootsie roll muffin biscuit icing dessert gingerbread. Pastry ice cream
-                              cheesecake fruitcake.
-                            </p>
-                            <p class="mb-0">
-                              Jelly-o jelly beans icing pastry cake cake lemon drops. Muffin muffin pie tiramisu halvah
-                              cotton candy liquorice caramels.
-                            </p>
+                          <div class="tab-pane fade" id="links-tab" role="tabpanel" aria-labelledby="links-tab" tabindex="0">
+                            <table  class="reviews-dt table table-hover datatables-basic">
+                              <thead>
+                                <tr>
+                                  <th>الروابط</th>
+                                  <th>التاريخ</th>
+                                  <th class="slim-col">الاجراءات</th>
+                                </tr>
+                              </thead>
+                              <tbody class="table-border-bottom-0 myTable">
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">القرآن الكريم</span>
+                                        </a>
+                                        <small class="text-muted">
+                                          https://quran.com/3/quran/alfatiha
+                                        </small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">القرآن الكريم</span>
+                                        </a>
+                                        <small class="text-muted">
+                                          https://quran.com/3/quran/alfatiha
+                                        </small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <div class="d-flex flex-column name-mw">
+                                        <a href="javascript:;" class="text-body">
+                                          <span class="fw-medium">القرآن الكريم</span>
+                                        </a>
+                                        <small class="text-muted">
+                                          https://quran.com/3/quran/alfatiha
+                                        </small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="number-unicode">
+                                      <span>
+                                        03-11-2023
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-download ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            تعديل
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+
                           </div>
-                          <div class="tab-pane fade" id="navs-left-messages">
+                          <div class="tab-pane fade" id="details-tab" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
                             <p>
-                              Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies
-                              cupcake gummi bears cake chocolate.
+                              من ناحية أخرى ، فإننا نشجب بسخط صالح ونكره الرجال الذين خدعهم سحر اللذة اللحظية وإحباطهم ، وأعمتهم الرغبة ، لدرجة أنهم لا يستطيعون التنبؤ بالألم والمتاعب التي لا بد أن تنجم عن ذلك ؛ واللوم المتساوي يقع على أولئك الذين يفشلون في أداء واجبهم بسبب ضعف الإرادة ، وهو نفس القول من خلال الانكماش من الكد والألم. هذه الحالات بسيطة للغاية وسهلة التمييز. في ساعة مجانية ، عندما تكون قدرتنا على الاختيار غير مقيدة وعندما لا شيء يمنعنا من القيام بما نفضله ، يجب الترحيب بكل متعة وتجنب كل ألم. ولكن في ظروف معينة وبسبب ادعاءات الواجب أو التزامات العمل ، سيحدث في كثير من الأحيان أنه يجب نبذ الملذات وقبول الإزعاج. لذلك يتمسك الرجل الحكيم دائمًا في هذه الأمور بمبدأ الاختيار هذا: فهو يرفض الملذات لتأمين ملذات أعظم أخرى ، وإلا فإنه يتحمل الآلام لتجنب الآلام السيئة.
                             </p>
                             <p class="mb-0">
-                              Cake chocolate bar cotton candy apple pie tootsie roll ice cream apple pie brownie cake. Sweet
-                              roll icing sesame snaps caramels danish toffee. Brownie biscuit dessert dessert. Pudding jelly
-                              jelly-o tart brownie jelly.
+                              يجب أن أشرح لك كيف ولدت كل هذه الفكرة الخاطئة المتمثلة في إدانة السرور ومدح الألم ، وسأقدم لك وصفًا كاملاً للنظام ، وأشرح التعاليم الفعلية للمستكشف العظيم للحقيقة ، الباني البارع. السعادة البشرية. لا أحد يرفض أو يكره أو يتجنب المتعة نفسها ، لأنها متعة ، ولكن لأن أولئك الذين لا يعرفون كيفية السعي وراء المتعة يواجهون عواقب مؤلمة للغاية. ولا يوجد أيضًا أي شخص يحب أو يسعى أو يرغب في الحصول على الألم من نفسه ، لأنه ألم ، ولكن في بعض الأحيان تحدث ظروف يمكن أن يجلب له فيها الكدح والألم بعض المتعة الكبيرة. لنأخذ مثالا تافها ، أي منا يقوم بتمارين بدنية شاقة ، إلا للحصول على بعض المزايا منها؟ ولكن من له الحق في أن يخطئ في رجل يختار أن يستمتع بسرور ليس له عواقب مزعجة ، أو من يتجنب الألم الذي لا ينتج عنه متعة؟
                             </p>
                           </div>
                         </div>
@@ -1457,32 +1783,27 @@
                     <div class="modal-body">
                       <div class=" mb-4">
                         <ul class="nav nav-tabs" role="tablist">
-                          <li class="nav-item">
-                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                              data-bs-target="#navs-notes" aria-controls="navs-notes" aria-selected="true">
-                              ملاحظات
-                            </button>
+
+                         
+
+
+
+                          <li class="nav-item" >
+                            <button class="nav-link active" id="review-tabnav" data-bs-toggle="tab" data-bs-target="#review-tab" type="button" role="tab" aria-controls="review-tab-pane" aria-selected="true">
+                              مراجعات</button>
                           </li>
                           <li class="nav-item">
-                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-review"
-                              aria-controls="navs-review" aria-selected="false">
-                              مراجعات
-                            </button>
+                            <button class="nav-link" id="notes-tabnav" data-bs-toggle="tab" data-bs-target="#notes-tab" type="button" role="tab" aria-controls="notes-tab-pane" aria-selected="false">
+                              ملاحظات</button>
                           </li>
+                          
                         </ul>
                         <div class="tab-content p-0">
-                          <div class="tab-pane fade p-3" id="navs-notes">
-                            <p>
-                              Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
-                              powder. Bear claw candy topping.
-                            </p>
-                            <p class="mb-0">
-                              Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
-                              jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
-                              jujubes sweet.
-                            </p>
-                          </div>
-                          <div class="tab-pane fade show active" id="navs-review">
+                          
+
+
+
+                            <div class="tab-pane fade show active" id="review-tab" role="tabpanel" aria-labelledby="review-tab" tabindex="0">
                             
                             <!--/ Review table -->
                                               <!-- Student Seminars table -->
@@ -1490,15 +1811,10 @@
                     <div class="card-header sticky-element border-bottom d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
                       <h5 class="card-title mb-sm-0 me-2">قائمة المراجعات</h5>
                       <div class="action-btns">
-                        <button class="btn btn-primary"
-                        type="button"
-                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
                           <i class="ti ti-bookmarks ti-sm"></i>
                           إضافة مراجعة
                         </button>
-
-
-                        
 
                       </div>
                     </div>
@@ -1555,12 +1871,12 @@
                                   </td>
                                   <td>
                                     <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body delete-record" 
+                                      <a href="javascript:;" class="text-body delete-record me-1" 
                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
-                                        <i class="ti ti-edit ti-sm mx-1"></i>
+                                        <i class="ti ti-edit ti-sm"></i>
                                       </a>
                                       <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-trash ti-sm me-1"></i>
+                                        <i class="ti ti-trash ti-sm"></i>
                                       </a>
                                     </div>
                                   </td>
@@ -1598,12 +1914,12 @@
                                   </td>
                                   <td>
                                     <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body delete-record" 
+                                      <a href="javascript:;" class="text-body delete-record me-1" 
                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
-                                        <i class="ti ti-edit ti-sm mx-1"></i>
+                                        <i class="ti ti-edit ti-sm"></i>
                                       </a>
                                       <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-trash ti-sm me-1"></i>
+                                        <i class="ti ti-trash ti-sm"></i>
                                       </a>
                                     </div>
                                   </td>
@@ -1641,12 +1957,12 @@
                                   </td>
                                   <td>
                                     <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body delete-record" 
+                                      <a href="javascript:;" class="text-body delete-record me-1" 
                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
-                                        <i class="ti ti-edit ti-sm mx-1"></i>
+                                        <i class="ti ti-edit ti-sm"></i>
                                       </a>
                                       <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-trash ti-sm me-1"></i>
+                                        <i class="ti ti-trash ti-sm"></i>
                                       </a>
                                     </div>
                                   </td>
@@ -1671,6 +1987,14 @@
                             <!--/ Review table -->
 
                           </div>
+                          <div class="tab-pane fade p-3" id="notes-tab" role="tabpanel" aria-labelledby="notes-tab" tabindex="0">
+                          <p>
+                              يجب أن أشرح لك كيف ولدت كل هذه الفكرة الخاطئة المتمثلة في إدانة السرور ومدح الألم ، وسأقدم لك وصفًا كاملاً للنظام ، وأشرح التعاليم الفعلية للمستكشف العظيم للحقيقة ، الباني البارع. السعادة البشرية. لا أحد يرفض أو يكره أو يتجنب المتعة نفسها ، لأنها متعة ، ولكن لأن أولئك الذين لا يعرفون كيفية السعي وراء المتعة يواجهون عواقب مؤلمة للغاية. ولا يوجد أيضًا أي شخص يحب أو يسعى أو يرغب في الحصول على الألم من نفسه ، لأنه ألم ، ولكن في بعض الأحيان تحدث ظروف يمكن أن يجلب له فيها الكدح والألم بعض المتعة الكبيرة. لنأخذ مثالا تافها ، أي منا يقوم بتمارين بدنية شاقة ، إلا للحصول على بعض المزايا منها؟ ولكن من له الحق في أن يخطئ في رجل يختار أن يستمتع بسرور ليس له عواقب مزعجة ، أو من يتجنب الألم الذي لا ينتج عنه متعة؟
+                            </p>
+                            <p class="mb-0">
+                              من ناحية أخرى ، فإننا نشجب بسخط صالح ونكره الرجال الذين خدعهم سحر اللذة اللحظية وإحباطهم ، وأعمتهم الرغبة ، لدرجة أنهم لا يستطيعون التنبؤ بالألم والمتاعب التي لا بد أن تنجم عن ذلك ؛ واللوم المتساوي يقع على أولئك الذين يفشلون في أداء واجبهم بسبب ضعف الإرادة ، وهو نفس القول من خلال الانكماش من الكد والألم. هذه الحالات بسيطة للغاية وسهلة التمييز. في ساعة مجانية ، عندما تكون قدرتنا على الاختيار غير مقيدة وعندما لا شيء يمنعنا من القيام بما نفضله ، يجب الترحيب بكل متعة وتجنب كل ألم. ولكن في ظروف معينة وبسبب ادعاءات الواجب أو التزامات العمل ، سيحدث في كثير من الأحيان أنه يجب نبذ الملذات وقبول الإزعاج. لذلك يتمسك الرجل الحكيم دائمًا في هذه الأمور بمبدأ الاختيار هذا: فهو يرفض الملذات لتأمين ملذات أعظم أخرى ، وإلا فإنه يتحمل الآلام لتجنب الآلام السيئة.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1683,6 +2007,96 @@
               <!-- /Modal -->
             </div>
             <!-- / Content -->
+
+
+        
+
+
+
+<!-- Modal 1-->
+<div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body with Tabs -->
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="" role="tablist">
+          <li class="nav-item" >
+            <button class="nav-link active" id="home-tab1nav" data-bs-toggle="tab" data-bs-target="#home-tab1" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+              Home1</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="profile-tab1nav" data-bs-toggle="tab" data-bs-target="#profile-tab1" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+              Profile1</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="contact-tab1nav" data-bs-toggle="tab" data-bs-target="#contact-tab1" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+              Contact1</button>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="home-tab1" role="tabpanel" aria-labelledby="home-tab" tabindex="0">content home1</div>
+          <div class="tab-pane fade" id="profile-tab1" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">content profile1</div>
+          <div class="tab-pane fade" id="contact-tab1" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">content contact1</div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--/ Modal 1-->
+<!-- Modal 2-->
+<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body with Tabs -->
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" id="home-tab2nav" data-bs-toggle="tab" data-bs-target="#home-tab2" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+              Home2</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="profile-tab2nav" data-bs-toggle="tab" data-bs-target="#profile-tab2" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+              Profile2</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="contact-tab2nav" data-bs-toggle="tab" data-bs-target="#contact-tab2" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+              Contact2</button>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="home-tab2" role="tabpanel" aria-labelledby="home-tab" tabindex="0">content home2</div>
+          <div class="tab-pane fade" id="profile-tab2" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">content profile2</div>
+          <div class="tab-pane fade" id="contact-tab2" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">content contact2</div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--/ Modal 2-->
+
+
+
+
+
+
 
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
@@ -2027,9 +2441,6 @@
 
     <!-- Vendors JS -->
     <script src="./assets/vendor/libs/select2/select2.js"></script>
-    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
-    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
     <script src="./assets/vendor/libs/cleavejs/cleave.js"></script>
     <script src="./assets/vendor/libs/cleavejs/cleave-phone.js"></script>
     <script src="./assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
@@ -2040,8 +2451,9 @@
         <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
         <script src="./assets/vendor/libs/bloodhound/bloodhound.js"></script>
         <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-        <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
         <script src="./assets/vendor/libs/moment/moment.js"></script>
+        
+        <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/rowgroup/1.4.1/js/dataTables.rowGroup.min.js"></script>
 
       
@@ -2054,7 +2466,7 @@
 
         <script>
           $(document).ready(function () {
-            var table = $('.seminars-dt').DataTable({
+            var table = $('#seminars-dt').DataTable({
               "language": {
                 "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
                 "sInfo": "عرض _START_ إلى _END_ من أصل _TOTAL_ مُدخل",
@@ -2079,7 +2491,7 @@
                   "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
                 },
               },
-              //"searching": false, // لإزالة خاصية البحث
+              "searching": false, // لإزالة خاصية البحث
               "lengthChange": false, // لإخفاء خيار "Table length"
               "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
               "columnDefs": [
@@ -2097,19 +2509,9 @@
                   visible: false
                 }
               ],
-              columns: [
-                { data: 'select' },
-                { data: 'name' },
-                { data: 'date' },
-                { data: 'seminars' },
-                { data: 'status' },
-                { data: 'rate' },
-                { data: 'actions' }
-              ],
               order: [[1, 'asc']] // Order by the Salary column
 
             });
-
 
             // البحث
             $('#searchInput').on('keyup', function () {
@@ -2127,20 +2529,25 @@
             });
             
 
+
+
             // لعرض المنهاج في صف 
-            table.rows().every(function () {
-              this.child(format(this.data())).show();
-            });
-            
+    table.rows().every(function () {
+      var rowData = this.data();
+      if (rowData && rowData.length > 3 && rowData[3].trim() !== '') {
+        this.child(format(rowData)).show();
+      }
+    });
+
 
           });
           function format(d) {
-            if (d.seminars.trim() !== '') {
+            if (d[3].trim() !== '') {
               return (
                 '<div class="d-flex flex-row ms-0 ms-md-5">' +
                 '<span class="me-2">المنهاج:</span>' +
                 '<span>' +
-                d.seminars +
+                  d[3] +
                 '</span>' +
                 '</div>'
               );
@@ -2195,19 +2602,31 @@
           });
         </script>
 
+
+
+
 <script>
-  // Get the input element by its ID
-  const dateInput = document.getElementById('dateInput');
+  document.querySelectorAll('[data-bs-toggle="modal"]').forEach(element => {
+    element.addEventListener('click', function (event) {
+      event.preventDefault(); // منع السلوك الافتراضي للرابط
 
-  // Create a new Date object to get the current date
-  const currentDate = new Date();
+      const targetModal = this.getAttribute('data-bs-target').substring(1);
+      const targetTab = this.getAttribute('data-bs-tab');
+      //const modal = new bootstrap.Modal(document.getElementById(targetModal), {});
+      //modal.show();
 
-  // Format the date to the string required by the input type 'date' (YYYY-MM-DD)
-  const formattedDate = currentDate.toISOString().slice(0, 10);
-
-  // Set the value of the input to the current date
-  dateInput.value = formattedDate;
+      const tab = document.getElementById(targetTab + 'nav');
+      const tabPane = new bootstrap.Tab(tab);
+      tabPane.show();
+    });
+  });
 </script>
+
+
+
+
+
+
 
 
 
@@ -2221,7 +2640,6 @@
     <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
 
     <!-- Page JS -->
-    <script src="./assets/js/modal-edit-user.js"></script>
     <script src="./assets/js/app-user-view.js"></script>
     <script src="./assets/js/app-user-view-account.js"></script>
   </body>
