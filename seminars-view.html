@@ -2149,7 +2149,7 @@
 
 
         <!-- Offcanvas -->
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
+        <div class="offcanvas offcanvas-end offcanvas-size-md" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
           <div class="offcanvas-header">
             <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة منهاج جديد</h5>
             <button
@@ -2302,7 +2302,7 @@
           </div>
         </div>
       
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasReviews" aria-labelledby="offcanvasReviewsLabel">
+        <div class="offcanvas offcanvas-end offcanvas-size-md" data-bs-scroll="true" tabindex="-1" id="offcanvasReviews" aria-labelledby="offcanvasReviewsLabel">
           <div class="offcanvas-header">
               <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة مراجعة</h5>
 
@@ -2431,10 +2431,10 @@
           </div>
         </div>
       
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasEditSeminars" aria-labelledby="offcanvasEditSeminarsLabel">
+        <div class="offcanvas offcanvas-end offcanvas-size-xl" data-bs-scroll="true"
+        tabindex="-1" id="offcanvasEditSeminars" aria-labelledby="offcanvasEditSeminarsLabel">
           <div class="offcanvas-header">
               <h5 id="offcanvasBackdropLabel" class="offcanvas-title">تعديل الحلقة التدريسية</h5>
-
               <button
                 type="button"
                 class="btn-close text-reset mt-1"
@@ -2443,12 +2443,9 @@
           </div>
 
           <div class="offcanvas-body vertical-example my-auto mx-0 flex-grow-0">
-            <div class="row">
-              <div class="col-lg-12">
-                <!-- 1. Delivery Address -->
-                <div class="row g-3 mb-4">
-                  
-                  <!-- Basic -->
+
+                  <div class="row g-3 mb-2">
+
                   <div class="col-md-12">
                     <label class="form-label" for="">عنوان الحلقة</label>
                     <input type="text" id="" class="form-control" placeholder="عنوان الحلقة">
@@ -2476,15 +2473,20 @@
                     </div>
                     <hr>
                   </div>
+
+                  </div>
+
                   <h5 class="mb-3">مستندات</h5>
-                  <div class="row g-3 mb-4">
+
+                  <div class="row g-3 mb-2">
                   <div class="col-md-12">
                     <label class="form-label" for="">اضافة مستند</label>
                     <div class="input-group">
                       <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="رفع الملف" multiple>
                       <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon03">تحميل</button>
                     </div>
-                    
+                  </div>
+                  <div class="col-md-12">
                     <div class="table-responsive tbl-responsive">
 
                             
@@ -2666,7 +2668,8 @@
                 </div>
 
                 <h5 class="mb-3">روابط خارجية</h5>
-                  <div class="row g-3 mb-4">
+
+                  <div class="row g-3 mb-2">
                     
                   <div class="col-md-12">
                     <label class="form-label" for="">اضافة رابط</label>
@@ -2824,32 +2827,16 @@
                     </div>
                     <hr>
                   </div>
-
-
                   </div>
 
-                  
-      
-
-      
-                  
-                  
-
-                  
-              </div>
-      
-                  <div class="row g-3 mb-4">
-                  <div class="col-12 action-btns">
-                    <button class="btn btn-label-primary me-3 waves-effect" data-bs-dismiss="offcanvas" aria-label="Close">
-                      <span class="align-middle">إلغاء</span>
-                    </button>
-                    <button class="btn btn-primary waves-effect waves-light">حفظ</button>
-                  </div>
-      
-      
-              </div>
-            </div>
-          </div>
+                  <div class="row g-3 mb-2">
+                    <div class="col-12 action-btns">
+                      <button class="btn btn-label-primary me-3 waves-effect" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <span class="align-middle">إلغاء</span>
+                      </button>
+                      <button class="btn btn-primary waves-effect waves-light">حفظ</button>
+                    </div>
+                </div>
       
           </div>
         </div>

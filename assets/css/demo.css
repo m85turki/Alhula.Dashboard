@@ -207,10 +207,6 @@
   text-align: right;
 }
 
-.offcanvas.offcanvas-end {
-  width: 600px;
-}
-
 .name-mw{
   min-width: 165px;
 }
@@ -292,4 +288,25 @@ td.text-truncate {
   width: 100%; /* Extend the cell as much as possible */
   max-width: 0; /* Avoid resizing beyond table width */
   min-width: calc(100% - 21px);
+}
+
+
+
+/*
+.offcanvas.offcanvas-end {
+  width: 600px;
+}
+*/
+.offcanvas-size-xxl {
+  --bs-offcanvas-width: min(95vw, 1000px) !important;
+}
+
+.offcanvas-size-xl {
+  --bs-offcanvas-width: min(95vw, 800px) !important;
+}
+.offcanvas-size-md { /* add Responsivenes to default offcanvas */
+  --bs-offcanvas-width: min(95vw, 600px) !important;
+}
+.offcanvas-size-sm {
+  --bs-offcanvas-width: min(95vw, 400px) !important;
 }
