@@ -1843,7 +1843,7 @@
                         </div>
                       </div>
 
-
+                      <hr class="my-1">
 
                       <div class=" mb-4">
                         <ul class="nav nav-tabs" role="tablist">
@@ -2864,6 +2864,7 @@
 
 
         <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+        
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/rowgroup/1.4.1/js/dataTables.rowGroup.min.js"></script>
 
       
@@ -2901,7 +2902,7 @@
                   "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
                 },
               },
-              "searching": false, // لإزالة خاصية البحث
+              //"searching": false, // لإزالة خاصية البحث
               "lengthChange": false, // لإخفاء خيار "Table length"
               "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
               "columnDefs": [
@@ -2945,6 +2946,8 @@
         this.child(format(rowData)).show();
       }
     });
+    // إزالة مربع البحث
+    $(".dataTables_filter").hide();
           });
           function format(d) {
             if (d[3].trim() !== '') {
@@ -2957,9 +2960,10 @@
                 '</div>'
               );
             }
-            // إزالة مربع البحث
-            $(".dataTables_filter").hide();
+            
           }
+
+          
         </script>
 
         <script>
@@ -3032,9 +3036,6 @@
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
-    
-    
-    
     <!-- Page JS -->
     <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
 

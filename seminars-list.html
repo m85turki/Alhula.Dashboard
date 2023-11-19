@@ -62,6 +62,11 @@
     <link rel="stylesheet" href="./assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/flatpickr/flatpickr.css" />
    
+
+    <link rel="stylesheet" href="./assets/vendor/libs/quill/typography.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/quill/katex.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/quill/editor.css" />
+
     <!-- Row Group CSS -->
     <link rel="stylesheet" href="./assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css" />
     <!-- Form Validation -->
@@ -830,12 +835,11 @@
                       <div class="action-btns">
                         <button class="btn btn-primary"
                         type="button"
-                          data-bs-toggle="offcanvas"
-                          data-bs-target="#offcanvasBoth"
-                          aria-controls="offcanvasBoth">
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditSeminars" aria-controls="offcanvasEditSeminars">
                           <i class="ti ti-plus me-1 ti-xs"></i>
                           اضافة حلقة تدرسية
                         </button>
+
 
 
                         
@@ -898,52 +902,110 @@
                             <table  class="example-dt table table-hover datatables-basic">
                               <thead>
                                 <tr>
-                                  <th>الاسم بالكامل</th>
-                                  <th>نوع الحلقة</th>
+                                  <th>اسم الحلقة</th>
+                                  <th>تاريخ البدء والانتهاء</th>
+                                  <th>نوع المادة</th>
                                   <th>الحالة</th>
-                                  <th>معلومات التواصل</th>
                                   <th style="width: 1%;">الاجراءات</th>
                                 </tr>
                               </thead>
                               <tbody class="table-border-bottom-0">
                                 <tr>
                                   <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
+                                   <div class="d-flex flex-column name-mw">
+                                    <a href="avascript:void(0);" class="text-body mb-1">
+                                      <span class="fw-medium">المنهج القويم في حفظ القران الكريم</span>
+                                    </a>
+                                    <small class="text-muted">حلقة التأسيس</small>
+                                  </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex">
+                                      <div class="number-unicode me-1">
+                                        <span>
+                                          03-11-2023
+                                        </span>
                                       </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">أحمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
+                                      <div class="me-1">
+                                        إلى
+                                      </div>
+                                      <div class="number-unicode me-1">
+                                        <span>
+                                          03-11-2023
+                                        </span>
                                       </div>
                                     </div>
+                                    
                                   </td>
                                   <td>
                                     <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
+                                      نوع المالدة:
                                     </spann>
-                                    حلقة التأسيس
+                                    نوع المادة
                                   </td>
                                   <td><span class="badge bg-label-primary me-1">فعال</span></td>
+
                                   <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
-                                        <span>
-                                          +965 97935052
-                                        </span>
+                                    <div class="d-flex align-items-center">
+                                      <a href="javascript:;" class="text-body">
+                                        <i class="ti ti-edit ti-sm me-1"></i>
+                                      </a>
+                                      <a href="javascript:;" class="text-body delete-record">
+                                        <i class="ti ti-trash ti-sm mx-1"></i>
+                                      </a>
+
+                                      <div class="dropdown">
+                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                          <a class="dropdown-item" href="javascript:void(0);" >
+                                            عرض
+                                          </a>
+                                          <a class="dropdown-item" href="javascript:void(0);">
+                                            دعم
+                                          </a>
+                                        </div>
                                       </div>
                                     </div>
                                   </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                   <div class="d-flex flex-column name-mw">
+                                    <a href="avascript:void(0);" class="text-body mb-1">
+                                      <span class="fw-medium">المنهج القويم في حفظ القران الكريم</span>
+                                    </a>
+                                    <small class="text-muted">حلقة التأسيس</small>
+                                  </div>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex">
+                                      <div class="number-unicode me-1">
+                                        <span>
+                                          03-11-2023
+                                        </span>
+                                      </div>
+                                      <div class="me-1">
+                                        إلى
+                                      </div>
+                                      <div class="number-unicode me-1">
+                                        <span>
+                                          03-11-2023
+                                        </span>
+                                      </div>
+                                    </div>
+                                    
+                                  </td>
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع المالدة:
+                                    </spann>
+                                    نوع المادة
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">فعال</span></td>
+
                                   <td>
                                     <div class="d-flex align-items-center">
                                       <a href="javascript:;" class="text-body">
@@ -971,43 +1033,39 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
+                                   <div class="d-flex flex-column name-mw">
+                                    <a href="avascript:void(0);" class="text-body mb-1">
+                                      <span class="fw-medium">المنهج القويم في حفظ القران الكريم</span>
+                                    </a>
+                                    <small class="text-muted">حلقة التأسيس</small>
+                                  </div>
                                   </td>
                                   <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-success me-1">مكتمل</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
+                                    <div class="d-flex">
+                                      <div class="number-unicode me-1">
                                         <span>
-                                          +965 97935052
+                                          03-11-2023
+                                        </span>
+                                      </div>
+                                      <div class="me-1">
+                                        إلى
+                                      </div>
+                                      <div class="number-unicode me-1">
+                                        <span>
+                                          03-11-2023
                                         </span>
                                       </div>
                                     </div>
+                                    
                                   </td>
-                                  
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع المالدة:
+                                    </spann>
+                                    نوع المادة
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">فعال</span></td>
+
                                   <td>
                                     <div class="d-flex align-items-center">
                                       <a href="javascript:;" class="text-body">
@@ -1031,48 +1089,43 @@
                                         </div>
                                       </div>
                                     </div>
-                                    
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
+                                   <div class="d-flex flex-column name-mw">
+                                    <a href="avascript:void(0);" class="text-body mb-1">
+                                      <span class="fw-medium">المنهج القويم في حفظ القران الكريم</span>
+                                    </a>
+                                    <small class="text-muted">حلقة التأسيس</small>
+                                  </div>
                                   </td>
                                   <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-info me-1">مجدول</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
+                                    <div class="d-flex">
+                                      <div class="number-unicode me-1">
                                         <span>
-                                          +965 97935052
+                                          03-11-2023
+                                        </span>
+                                      </div>
+                                      <div class="me-1">
+                                        إلى
+                                      </div>
+                                      <div class="number-unicode me-1">
+                                        <span>
+                                          03-11-2023
                                         </span>
                                       </div>
                                     </div>
+                                    
                                   </td>
-                                  
+                                  <td>
+                                    <spann class="text-light fw-medium d-block d-md-none">
+                                      نوع المالدة:
+                                    </spann>
+                                    نوع المادة
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">فعال</span></td>
+
                                   <td>
                                     <div class="d-flex align-items-center">
                                       <a href="javascript:;" class="text-body">
@@ -1096,74 +1149,9 @@
                                         </div>
                                       </div>
                                     </div>
-                                    
                                   </td>
                                 </tr>
-                                <tr>
-                                  <td>
-                                    <div class="d-flex justify-content-start align-items-center user-name">
-                                      <div class="avatar-wrapper">
-                                        <div class="avatar me-3 d-none">
-                                          <img src="./assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                                        </div>
-                                        <div class="avatar me-3">
-                                          <span class="avatar-initial rounded-circle bg-label-primary">م ت</span>
-                                        </div>
-                                      </div>
-                                      <div class="d-flex flex-column name-mw">
-                                        <a href="app-user-view-account.html" class="text-body">
-                                          <span class="fw-medium">محمد عيسى الفيلكاوي</span>
-                                        </a>
-                                        <small class="text-muted">المشرف العام لفئة حفظ القرآن الكريم</small>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <spann class="text-light fw-medium d-block d-md-none">
-                                      نوع الحلقة:
-                                    </spann>
-                                    حلقة التأسيس
-                                  </td>
-                                  <td><span class="badge bg-label-warning me-1">قيد الإنتظار</span></td>
-                                  <td>
-                                    <div class="number-unicode">
-                                      <div>
-                                        <small class="text-muted">55637033@gmail.com</small>
-                                      </div>
-                                      <div>
-                                        <span>
-                                          +965 97935052
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  
-                                  <td>
-                                    <div class="d-flex align-items-center">
-                                      <a href="javascript:;" class="text-body">
-                                        <i class="ti ti-edit ti-sm me-1"></i>
-                                      </a>
-                                      <a href="javascript:;" class="text-body delete-record">
-                                        <i class="ti ti-trash ti-sm mx-1"></i>
-                                      </a>
 
-                                      <div class="dropdown">
-                                        <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                          <i class="ti ti-dots-vertical ti-sm mx-1"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                          <a class="dropdown-item" href="javascript:void(0);" >
-                                            عرض
-                                          </a>
-                                          <a class="dropdown-item" href="javascript:void(0);">
-                                            دعم
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    
-                                  </td>
-                                </tr>
                               </tbody>
                             </table>
 
@@ -1222,7 +1210,7 @@
     <!-- / Layout wrapper -->
     
     <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
+    <div class="offcanvas offcanvas-end offcanvas-size-md" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
     <div class="offcanvas-header">
       <h5 id="offcanvasBackdropLabel" class="offcanvas-title">إضافة مستخدم جديد</h5>
       <button
@@ -1370,7 +1358,420 @@
   </div>
 
 
+  <div class="offcanvas offcanvas-end offcanvas-size-xl" data-bs-scroll="true" tabindex="-1" id="offcanvasEditSeminars" aria-labelledby="offcanvasEditSeminarsLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasBackdropLabel" class="offcanvas-title">اضافة حلقة تدرسية</h5>
+        <button
+          type="button"
+          class="btn-close text-reset mt-1"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body vertical-example my-auto mx-0 flex-grow-0">
+
+            <div class="row g-3 mb-2">
+
+            <div class="col-md-12">
+              <label class="form-label" for="">عنوان الحلقة</label>
+              <input type="text" id="" class="form-control" placeholder="عنوان الحلقة">
+            </div>
+
+            <div class="col-md-12">
+              <label class="form-label" for="">نوع الحلقة</label>
+              <select
+              id="" class="selectpicker w-100"
+              data-style="btn-default"
+              data-live-search="true"
+              placeholder="إختر النوع" multiple>
+                <option>نوع رقم 1</option>
+                <option>نوع رقم 2</option>
+                <option>نوع رقم 3</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label" for="">التفاصيل</label>
+              <div id="full-editor">
+                <h6>بعض التفاصيل</h6>
+                <p>
+                  وصف التفاصيل المتعلقة بالحلقة
+                </p>
+              </div>
+              <hr>
+            </div>
+
+            </div>
+
+            <h5 class="mb-3">مستندات</h5>
+
+            <div class="row g-3 mb-2">
+            <div class="col-md-12">
+              <label class="form-label" for="">اضافة مستند</label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="رفع الملف" multiple>
+                <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon03">
+                  <i class="ti ti-upload ti-sm me-1"></i>
+                  تحميل</button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="table-responsive tbl-responsive">
+
+                      
+                <table  class="reviews-dt table table-hover datatables-basic">
+                  <thead>
+                    <tr>
+                      <th>اسم المستند</th>
+                      <th>التاريخ</th>
+                      <th class="slim-col">الاجراءات</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-border-bottom-0 myTable">
+                    <tr>
+                      <td>
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">alfatiha.pdf</span>
+                            </a>
+                            <small class="text-muted">120KB</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-download ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">alfatiha.pdf</span>
+                            </a>
+                            <small class="text-muted">120KB</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-download ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">alfatiha.pdf</span>
+                            </a>
+                            <small class="text-muted">120KB</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-download ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">alfatiha.pdf</span>
+                            </a>
+                            <small class="text-muted">120KB</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-download ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <hr>
+            </div>
+          </div>
+
+          <h5 class="mb-3">روابط خارجية</h5>
+
+            <div class="row g-3 mb-2">
+              
+            <div class="col-md-12">
+              <label class="form-label" for="">اضافة رابط</label>
+
+              <div class="input-group">
+                 
+                  <input type="text" id="" class="form-control" placeholder="عنوان الحلقة">
+                  <input type="text" id="" class="form-control" style="width: 30%;" placeholder="الرابط">
+                <button class="btn btn-outline-primary col-auto" type="button" id="inputGroupFileAddon03">
+                  <i class="ti ti-plus ti-sm me-1"></i>
+                  إضافة</button>
+              </div>
+
+            </div>
+            <div class="col-md-12">
+              <div class="table-responsive tbl-responsive">
+                <table  class="reviews-dt table table-hover datatables-basic">
+                  <thead>
+                    <tr>
+                      <th>الروابط</th>
+                      <th>التاريخ</th>
+                      <th class="slim-col">الاجراءات</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-border-bottom-0 myTable">
+                    <tr>
+                      <td class="text-truncate">
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">القرآن الكريم</span>
+                            </a>
+                              <small class="text-muted text-truncate">
+                                https://quran.com/3/quran/alfatihaquran.com/3/quran/alfatihaquran.com/3/quran/alfatiha
+                              </small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-link ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-truncate">
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">القرآن الكريم</span>
+                            </a>
+                            <small class="text-muted text-truncate">
+                              https://quran.com/3/quran/alfatiha
+                            </small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-link ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-truncate">
+                        <div class="number-unicode">
+                          <div class="d-flex flex-column name-mw">
+                            <a href="javascript:;" class="text-body">
+                              <span class="fw-medium">القرآن الكريم</span>
+                            </a>
+                            <small class="text-muted text-truncate">
+                              https://quran.com/3/quran/alfatiha
+                            </small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="number-unicode">
+                          <span class="text-truncate">
+                            03-11-2023
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <a href="javascript:;" class="text-body">
+                            <i class="ti ti-link ti-sm me-1"></i>
+                          </a>
+                          <a href="javascript:;" class="text-body delete-record">
+                            <i class="ti ti-trash ti-sm mx-1"></i>
+                          </a>
+
+                          <div class="dropdown">
+                            <a class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical ti-sm mx-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="javascript:void(0);">
+                                تعديل
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <hr>
+            </div>
+            </div>
+
+            <div class="row g-3 mb-2">
+              <div class="col-12 action-btns">
+                <button class="btn btn-label-primary me-3 waves-effect" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <span class="align-middle">إلغاء</span>
+                </button>
+                <button class="btn btn-primary waves-effect waves-light">حفظ</button>
+              </div>
+          </div>
+
+    </div>
+  </div>
     <!-- / Offcanvas -->
+
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -1403,6 +1804,12 @@
         <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
         <script src="./assets/vendor/libs/bloodhound/bloodhound.js"></script>
         <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+        <script src="./assets/vendor/libs/moment/moment.js"></script>
+
+        <script src="./assets/vendor/libs/quill/katex.js"></script>
+        <script src="./assets/vendor/libs/quill/quill.js"></script>
+
         <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
       
@@ -1492,20 +1899,57 @@
               var selectedValues = $('#filterStatus').val();
               table.column(2).search(selectedValues.join('|'), true, false).draw();
             });
-
-
-
-
-
-
           });
         </script>
+
+
+<script>
+  $(document).ready(function () {
+    var table = $('.reviews-dt').DataTable({
+      "language": {
+        "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+        "sInfo": "عرض _START_ إلى _END_ من أصل _TOTAL_ مُدخل",
+        "sInfoEmpty": "عرض 0 إلى 0 من أصل 0 مُدخل",
+        "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+        "sInfoPostFix": "",
+        "sInfoThousands": ",",
+        "sLengthMenu": "عرض _MENU_ مُدخل",
+        "sLoadingRecords": "جارٍ التحميل...",
+        "sProcessing": "جارٍ المعالجة...",
+        "sSearch": "بحث:",
+        "sZeroRecords": "لم يتم العثور على أية سجلات مطابقة",
+        "oPaginate": {
+          "sFirst": "الأول",
+          "sPrevious": "السابق",
+          "sNext": "التالي",
+          "sLast": "الأخير"
+        },
+        
+        "oAria": {
+          "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+          "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+        },
+      },
+      "searching": false, // لإزالة خاصية البحث
+      "lengthChange": false, // لإخفاء خيار "Table length"
+      "lengthMenu": [[10, 25, 50, 100], [10, 25, 50, 100]], // خيارات العدد المخصصة
+      "columnDefs": [
+        {
+          //"targets": -1, // العمود الأخير (العمود الذي يحتوي على الإجراءات)
+          "targets": [-1], // العواميد الأول والأخير والقبل الأخير
+          "orderable": false // إزالة إمكانية الترتيب
+        }
+      ],
+    });
+  });
+</script>
         
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
     <!-- Page JS -->
     <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
+    <script src="./assets/js/forms-editors.js"></script>
 
 
   </body>
