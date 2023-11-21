@@ -6824,24 +6824,24 @@ label.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #a8aaae;
-  border-color: #a8aaae;
+  background-color: #F1A191;
+  border-color: #F1A191;
 }
 .btn-secondary:hover {
   color: #fff !important;
-  background-color: #97999d !important;
-  border-color: #97999d !important;
+  background-color: #f1ac9e !important;
+  border-color: #f1ac9e !important;
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus, .btn-secondary.focus {
   color: #fff;
-  background-color: #97999d;
-  border-color: #97999d;
+  background-color: #f1ac9e;
+  border-color: #f1ac9e;
   box-shadow: none;
 }
 .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .btn-secondary.show.dropdown-toggle, .show > .btn-secondary.dropdown-toggle {
   color: #fff !important;
-  background-color: #97999d !important;
-  border-color: #97999d !important;
+  background-color: #f1ac9e !important;
+  border-color: #f1ac9e !important;
 }
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff !important;
@@ -6852,13 +6852,13 @@ label.btn {
 
 .btn-group .btn-secondary,
 .input-group .btn-secondary {
-  border-right: 1px solid #97999d;
-  border-left: 1px solid #97999d;
+  border-right: 1px solid #f1ac9e;
+  border-left: 1px solid #f1ac9e;
 }
 
 .btn-group-vertical .btn-secondary {
-  border-top-color: #97999d;
-  border-bottom-color: #97999d;
+  border-top-color: #f1ac9e;
+  border-bottom-color: #f1ac9e;
 }
 
 .btn-label-secondary {

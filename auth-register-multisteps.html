@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html
+  lang="ar"
+  class="light-style layout-wide customizer-hide"
+  dir="rtl"
+  data-theme="theme-default"
+  data-assets-path="./assets/"
+  data-template="vertical-menu-template-no-customizer">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>التسجيل في الحلة</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="./assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="./assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
+    <!-- Vendor -->
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Page -->
+    <link rel="stylesheet" href="./assets/vendor/css/pages/page-auth.css" />
+
+    <!-- Helpers -->
+    <script src="./assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="./assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Content -->
+
+    <div class="authentication-wrapper authentication-cover authentication-bg">
+      <div class="authentication-inner row">
+        <!-- Left Text -->
+        <div
+          class="d-none d-lg-flex col-lg-4 align-items-center justify-content-center p-5 auth-cover-bg-color position-relative auth-multisteps-bg-height">
+          <!-- Logo -->
+          <div class="app-brand justify-content-center mb-4 mt-2">
+            <a href="javascript:void(0);" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="./assets/img/branding/logo.png" alt="">
+              </span>
+              <span class="app-brand-text demo">
+                <img src="./assets/img/branding/name.png" alt="">
+              </span>
+            </a>
+        </div>
+        <!-- /Logo -->
+
+          <img
+            src="./assets/img/illustrations/bg-shape-image-light.png"
+            alt="auth-register-multisteps"
+            class="platform-bg"
+            data-app-light-img="illustrations/bg-shape-image-light.png"
+            data-app-dark-img="illustrations/bg-shape-image-dark.png" />
+        </div>
+        <!-- /Left Text -->
+
+        <!--  Multi Steps Registration -->
+        <div class="d-flex col-lg-8 align-items-center justify-content-center p-sm-5 p-3">
+          <div class="w-px-700">
+            <div id="" class="bs-stepper shadow-none wizard-auth">
+              <div class="bs-stepper-header border-bottom-0">
+                <div class="step" data-target="#accountDetailsValidation">
+                  <button type="button" class="step-trigger">
+                    <span class="bs-stepper-circle"><i class="ti ti-smart-home ti-sm"></i></span>
+                    <span class="bs-stepper-label">
+                      <span class="bs-stepper-title">معلومات الحساب</span>
+                      <span class="bs-stepper-subtitle">تفاصيل الحساب</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="line">
+                  <i class="ti ti-chevron-right"></i>
+                </div>
+                <div class="step" data-target="#personalInfoValidation">
+                  <button type="button" class="step-trigger">
+                    <span class="bs-stepper-circle"><i class="ti ti-users ti-sm"></i></span>
+                    <span class="bs-stepper-label">
+                      <span class="bs-stepper-title">المعلومات الشخصية</span>
+                      <span class="bs-stepper-subtitle">ملف البيانات</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="line">
+                  <i class="ti ti-chevron-right"></i>
+                </div>
+                <div class="step" data-target="#billingLinksValidation">
+                  <button type="button" class="step-trigger">
+                    <span class="bs-stepper-circle"><i class="ti ti-file-text ti-sm"></i></span>
+                    <span class="bs-stepper-label">
+                      <span class="bs-stepper-title">المركز</span>
+                      <span class="bs-stepper-subtitle">اختيار المركز</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="bs-stepper-content">
+                <form id="multiStepsForm" onSubmit="return false">
+                  <!-- Account Details -->
+                  <div id="accountDetailsValidation" class="content">
+                    <div class="content-header mb-4">
+                      <h3 class="mb-1">معلومات الحساب</h3>
+                      <p>أدخل تفاصيل حسابك</p>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label class="form-label" for="multiStepsEmail">البريد الإلكتروني</label>
+                        <input
+                          type="email"
+                          name="multiStepsEmail"
+                          id="multiStepsEmail"
+                          class="form-control"
+                          placeholder="john.doe@email.com"
+                          aria-label="john.doe" />
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="form-label" for="multiStepsUsername">رقم التواصل</label>
+                        <input
+                          type="text"
+                          name="multiStepsUsername"
+                          id="multiStepsUsername"
+                          class="form-control"
+                          placeholder="0000 0000" />
+                      </div>
+                      
+                      <div class="col-sm-6 form-password-toggle">
+                        <label class="form-label" for="multiStepsPass">رمز الدخول</label>
+                        <div class="input-group input-group-merge">
+                          <input
+                            type="password"
+                            id="multiStepsPass"
+                            name="multiStepsPass"
+                            class="form-control"
+                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                            aria-describedby="multiStepsPass2" />
+                          <span class="input-group-text cursor-pointer" id="multiStepsPass2"
+                            ><i class="ti ti-eye-off"></i
+                          ></span>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 form-password-toggle">
+                        <label class="form-label" for="multiStepsConfirmPass">تأكيد رمز الدخول</label>
+                        <div class="input-group input-group-merge">
+                          <input
+                            type="password"
+                            id="multiStepsConfirmPass"
+                            name="multiStepsConfirmPass"
+                            class="form-control"
+                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                            aria-describedby="multiStepsConfirmPass2" />
+                          <span class="input-group-text cursor-pointer" id="multiStepsConfirmPass2"
+                            ><i class="ti ti-eye-off"></i
+                          ></span>
+                        </div>
+                      </div>
+                          
+                    
+                      <div class="col-12 d-flex justify-content-between mt-4">
+                        <button class="btn btn-label-secondary btn-prev" disabled>
+                          <i class="ti ti-arrow-left ti-xs me-sm-1 me-0"></i>
+                          <span class="align-middle d-sm-inline-block d-none">السابق</span>
+                        </button>
+                        <button class="btn btn-primary btn-next">
+                          <span class="align-middle d-sm-inline-block d-none me-sm-1 me-0">التالي</span>
+                          <i class="ti ti-arrow-right ti-xs"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Personal Info -->
+                  <div id="personalInfoValidation" class="content">
+                    <div class="content-header mb-4">
+                      <h3 class="mb-1">المعلومات الشخصية</h3>
+                      <p>ملف البيانات</p>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-sm-12">
+                        <label class="form-label" for="multiStepsFirstName">الإسم بالكامل</label>
+                        <input
+                          type="text"
+                          id="multiStepsFirstName"
+                          name="multiStepsFirstName"
+                          class="form-control"
+                          placeholder="الإسم بالكامل" />
+                      </div>
+                      <div class="col-md-12"> 
+                        <div class="form-group">
+                          <label class="form-label" for="">الجنس</label>
+                          <div class="">
+                                <div class="form-check form-check-inline">
+                                    <input name="gender_id" class="form-check-input" type="radio" value="1" id="genderRadioMale">
+                                    <label class="form-check-label" for="genderRadioMale">
+                                      ذكر
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input name="gender_id" class="form-check-input" type="radio" value="2" id="genderRadioFemale">
+                                  <label class="form-check-label" for="genderRadioFemale">
+                                    أنثى
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      <div class="col-12 col-sm-6 ">
+                        <label class="form-label" for="multiStepsLastName">الرقم المدني</label>
+                        <input
+                          type="text"
+                          id="multiStepsLastName"
+                          name="multiStepsLastName"
+                          class="form-control"
+                          placeholder="0000 0000 0000" />
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <label class="form-label" for="">تاريخ الميلاد</label>
+                        <input class="form-control" type="date" value="" id="userDate">
+                      </div>
+                          
+
+                      
+                      <div class="col-12 col-sm-6">
+                        <label for="" class="form-label">الجنسية</label>
+                        <select
+                          id=""
+                          class="selectpicker w-100"
+                          data-style="btn-default"
+                          data-live-search="true"
+                          placeholder="حدد الجنسية">
+                          <option>كويتي</option>
+                          <option>غير كويتي</option>
+                        </select>
+                      </div>
+
+                      <div class="col-12 col-sm-6">
+                        <label class="form-label" for="multiStepsPincode">الدولة</label>
+                        <select
+                          id=""
+                          class="selectpicker w-100"
+                          data-style="btn-default"
+                          data-live-search="true"
+                          placeholder="حدد الدولة">
+                          <option>الكويت</option>
+                          <option>عمان</option>
+                          <option>اليمن</option>
+                          <option>فلسطين</option>
+                        </select>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label" for="multiStepsAddress">العنوان</label>
+                        <input
+                          type="text"
+                          id="multiStepsAddress"
+                          name="multiStepsAddress"
+                          class="form-control"
+                          placeholder="العنوان" />
+                      </div>
+                      <div class="col-md-12"> 
+                        <div class="form-group">
+                            <label class="form-label" for="">هل يعاني الطالب/ـة من أمراض أو حساسية</label>
+                            <div class="">
+                                <div class="form-check form-check-inline">
+                                    <input name="any_disease" class="form-check-input" type="radio" value="1" id="yes_disease">
+                                    <label class="form-check-label" for="yes_disease">
+                                        نعم
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="any_disease" class="form-check-input" type="radio" value="2" id="no_disease">
+                                    <label class="form-check-label" for="no_disease">
+                                        لا
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between mt-4">
+                        <button class="btn btn-label-secondary btn-prev">
+                          <i class="ti ti-arrow-left ti-xs me-sm-1 me-0"></i>
+                          <span class="align-middle d-sm-inline-block d-none">السابق</span>
+                        </button>
+                        <button class="btn btn-primary btn-next">
+                          <span class="align-middle d-sm-inline-block d-none me-sm-1 me-0">التالي</span>
+                          <i class="ti ti-arrow-right ti-xs"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Billing Links -->
+                  <div id="billingLinksValidation" class="content">
+                    <div class="content-header">
+                      <h3 class="mb-1">المركز</h3>
+                      <p>إختيار المركز</p>
+                    </div>
+                    
+                   
+                    <!-- Credit Card Details -->
+                    <div class="row g-3">
+                      <div class="col-md-12"> 
+                        <div class="form-group">
+                            <label class="form-label fw-bold" for="">اسم المركز</label>
+                            <div class="">
+                                <div class="form-check mb-2">
+                                    <input name="option-center" class="form-check-input" type="radio" value="1" id="option-center-a">
+                                    <label class="form-check-label" for="option-center-a">
+                                      مركز الخطابي - منطقة جابر الأحمد
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input name="option-center" class="form-check-input" type="radio" value="2" id="option-center-b">
+                                    <label class="form-check-label" for="option-center-b">
+                                      مركز الزبن - منطقة حطين
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input name="option-center" class="form-check-input" type="radio" value="3" id="option-center-c">
+                                    <label class="form-check-label" for="option-center-c">
+                                      مركز الزير (رجال) - منطقة الروضة
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input name="option-center" class="form-check-input" type="radio" value="4" id="option-center-d">
+                                    <label class="form-check-label" for="option-center-d">
+                                      مركز الزير (النساء) - منطقة الروضة
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-md-12"> 
+                      <div class="form-group">
+                          <label class="form-label fw-bold" for="">نوع الحلقة المختارة</label>
+                          <div class="">
+                              <div class="form-check mb-2">
+                                  <input name="option-type" class="form-check-input" type="radio" value="1" id="option-type-a">
+                                  <label class="form-check-label" for="option-type-a">
+                                    حلقة التأسيس
+                                  </label>
+                              </div>
+                              <div class="form-check mb-2">
+                                  <input name="option-type" class="form-check-input" type="radio" value="2" id="option-type-b">
+                                  <label class="form-check-label" for="option-type-b">
+                                    حلقة حفظ القرآن بمنهجية معتمدة
+                                  </label>
+                              </div>
+                              <div class="form-check mb-2">
+                                  <input name="option-type" class="form-check-input" type="radio" value="3" id="option-type-c">
+                                  <label class="form-check-label" for="option-type-c">
+                                    حلقة الحفظ الحر
+                                  </label>
+                              </div>
+                              <div class="form-check mb-2">
+                                  <input name="option-type" class="form-check-input" type="radio" value="4" id="option-type-d">
+                                  <label class="form-check-label" for="option-type-d">
+                                    حلقة الإسناد
+                                  </label>
+                              </div>
+                              <div class="form-check mb-2">
+                                  <input name="option-type" class="form-check-input" type="radio" value="5" id="option-type-e">
+                                  <label class="form-check-label" for="option-type-e">
+                                    مقرر الحفظ لطلاب البرامج العلمية في جمعية الراسخون في العلم
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+
+                      <div class="col-12 d-flex justify-content-between mt-4">
+                        <button class="btn btn-label-secondary btn-prev">
+                          <i class="ti ti-arrow-left ti-xs me-sm-1 me-0"></i>
+                          <span class="align-middle d-sm-inline-block d-none">السابق</span>
+                        </button>
+                        <button type="submit" class="btn btn-secondary btn-next btn-submit">التسجيل</button>
+                      </div>
+                    </div>
+                    <!--/ Credit Card Details -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / Multi Steps Registration -->
+      </div>
+    </div>
+
+    <script>
+      // Check selected custom option
+      window.Helpers.initCustomOptionCheck();
+    </script>
+
+    <!-- / Content -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="./assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="./assets/vendor/libs/popper/popper.js"></script>
+    <script src="./assets/vendor/js/bootstrap.js"></script>
+    <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="./assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="./assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="./assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="./assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="./assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="./assets/vendor/libs/select2/select2.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+
+    <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+
+    <!-- Main JS -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/forms-selects.js"></script>
+
+
+    <!-- Page JS -->
+    <script>
+      $(document).ready(function () {
+  // Icons Wizard
+  // --------------------------------------------------------------------
+  const wizardIcons = document.querySelector('.wizard-auth');
+
+  if (typeof wizardIcons !== undefined && wizardIcons !== null) {
+    const wizardIconsBtnNextList = [].slice.call(wizardIcons.querySelectorAll('.btn-next')),
+      wizardIconsBtnPrevList = [].slice.call(wizardIcons.querySelectorAll('.btn-prev')),
+      wizardIconsBtnSubmit = wizardIcons.querySelector('.btn-submit');
+
+    const iconsStepper = new Stepper(wizardIcons, {
+      linear: false
+    });
+    if (wizardIconsBtnNextList) {
+      wizardIconsBtnNextList.forEach(wizardIconsBtnNext => {
+        wizardIconsBtnNext.addEventListener('click', event => {
+          iconsStepper.next();
+        });
+      });
+    }
+    if (wizardIconsBtnPrevList) {
+      wizardIconsBtnPrevList.forEach(wizardIconsBtnPrev => {
+        wizardIconsBtnPrev.addEventListener('click', event => {
+          iconsStepper.previous();
+        });
+      });
+    }
+    if (wizardIconsBtnSubmit) {
+      wizardIconsBtnSubmit.addEventListener('click', event => {
+        alert('Submitted..!!');
+      });
+    }
+  }
+})
+    </script>
+  </body>
+</html>

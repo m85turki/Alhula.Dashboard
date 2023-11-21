@@ -814,11 +814,14 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="py-3 mb-4">
+              <h4 class="py-3 mb-0">
                 <span class="text-muted fw-light me-2">إدارة الحلقات التدريسية /</span>تفاصيل الحلقة التدريسية</h4>
+                <div class="mb-4">
+                  <a id="toggleButton" href="javascript:void(0);"><i class="ti ti-viewport-wide ti-sm"></i> إخفاء التفاصيل</a>
+                </div>
               <div class="row">
                 <!-- User Sidebar -->
-                <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+                <div id="detailsSeminars" class="col-xl-4 col-lg-5 col-md-5 order-0">
                   <!-- User Card -->
                   <div class="card mb-4">
                     <div class="card-body">
@@ -960,7 +963,7 @@
                 <!--/ User Sidebar -->
 
                 <!-- User Content -->
-                <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+                <div id="listSeminars" class="col-xl-8 col-lg-7 col-md-7 order-1">
                   <!-- User Pills -->
                   <ul class="nav nav-pills flex-column flex-md-row mb-4">
                     <li class="nav-item">
@@ -1872,7 +1875,7 @@
                             <!--/ Review table -->
                                               <!-- Student Seminars table -->
                   <div class="card bg-none shadow-none">
-                    <div class="card-header sticky-element border-bottom d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row">
+                    <div class="card-header sticky-element border-bottom d-flex justify-content-sm-between align-items-sm-center flex-column flex-sm-row px-0">
                       <h5 class="card-title mb-sm-0 me-2">قائمة المراجعات</h5>
                       <div class="action-btns">
                         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviews" aria-controls="offcanvasReviews">
@@ -3027,6 +3030,28 @@
 
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var detailsSeminars = document.getElementById('detailsSeminars');
+      var listSeminars = document.getElementById('listSeminars');
+      var toggleButton = document.getElementById('toggleButton');
+
+      toggleButton.addEventListener('click', function () {
+          detailsSeminars.classList.toggle('hidden-details');
+          if (detailsSeminars.classList.contains('hidden-details')) {
+              listSeminars.classList.remove('col-xl-8', 'col-lg-7', 'col-md-7', 'order-1');
+              listSeminars.classList.add('col', 'order-1');
+              toggleButton.innerHTML = '<i class="ti ti-viewport-narrow ti-sm"></i> إظهار التفاصيل';
+              
+          } else {
+              listSeminars.classList.remove('col');
+              listSeminars.classList.add('col-xl-8', 'col-lg-7', 'col-md-7', 'order-1');
+              toggleButton.innerHTML = '<i class="ti ti-viewport-wide ti-sm"></i> إخفاء التفاصيل';
+          }
+      });
+  });
+</script>
+
 
 
 
@@ -3039,9 +3064,9 @@
     <!-- Page JS -->
     <script src="./assets/js/extended-ui-perfect-scrollbar.js"></script>
 
-    <!-- Page JS -->
+    <!-- Page JS
     <script src="./assets/js/app-user-view.js"></script>
-    <script src="./assets/js/app-user-view-account.js"></script>
+    <script src="./assets/js/app-user-view-account.js"></script> -->
     <script src="./assets/js/forms-editors.js"></script>
   </body>
 </html>

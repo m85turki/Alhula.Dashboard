@@ -801,7 +801,7 @@ a {
   color: #00526B;
 }
 a:hover {
-  color: #8176f2;
+  color: #076A81;
 }
 
 .fill-primary {
@@ -1205,7 +1205,7 @@ li.ui-timepicker-selected,
 }
 .bs-stepper .step.crossed .step-trigger .bs-stepper-circle {
   background-color: #f4f3fe !important;
-  color: #aba4f6 !important;
+  color: #076A81 !important;
 }
 .bs-stepper .step.crossed .step-trigger .bs-stepper-icon svg {
   fill: #00526B !important;

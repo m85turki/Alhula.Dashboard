@@ -19,13 +19,23 @@
   display: -ms-flexbox;
   display: flex;
   width: 34px;
-  height: 24px;
+  height: auto;
 }
 
 .app-brand-logo.demo svg {
   width: 35px;
-  height: 24px;
+  height: auto;
 }
+
+  .customizer-hide .app-brand-logo.demo {
+    width: 84px;
+    height: auto;
+  }
+
+  .customizer-hide .app-brand-logo.demo svg {
+    width: 85px;
+    height: auto;
+  }
 
 .app-brand-text.demo {
   font-size: 1.375rem;
@@ -143,6 +153,10 @@
   width: 100%;
 }
 
+  .customizer-hide .app-brand-text.demo {
+    position: relative;
+    width: 185px;
+  }
 
 
 /***/
@@ -310,3 +324,8 @@ td.text-truncate {
 .offcanvas-size-sm {
   --bs-offcanvas-width: min(95vw, 400px) !important;
 }
+
+.hidden-details{
+  display: none;
+}
+
