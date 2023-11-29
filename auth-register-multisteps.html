@@ -129,66 +129,74 @@
                 </div>
               </div>
               <div class="bs-stepper-content">
-                <form id="multiStepsForm" onSubmit="return false">
+                <form id="multiStepsForm" onSubmit="return false" >
                   <!-- Account Details -->
                   <div id="accountDetailsValidation" class="content">
                     <div class="content-header mb-4">
                       <h3 class="mb-1">معلومات الحساب</h3>
                       <p>أدخل تفاصيل حسابك</p>
                     </div>
-                    <div class="row g-3">
-                      <div class="col-sm-6">
-                        <label class="form-label" for="multiStepsEmail">البريد الإلكتروني</label>
-                        <input
-                          type="email"
-                          name="multiStepsEmail"
-                          id="multiStepsEmail"
-                          class="form-control"
-                          placeholder="john.doe@email.com"
-                          aria-label="john.doe" />
-                      </div>
-                      <div class="col-sm-6">
-                        <label class="form-label" for="multiStepsUsername">رقم التواصل</label>
-                        <input
-                          type="text"
-                          name="multiStepsUsername"
-                          id="multiStepsUsername"
-                          class="form-control"
-                          placeholder="0000 0000" />
-                      </div>
-                      
-                      <div class="col-sm-6 form-password-toggle">
-                        <label class="form-label" for="multiStepsPass">رمز الدخول</label>
-                        <div class="input-group input-group-merge">
-                          <input
-                            type="password"
-                            id="multiStepsPass"
-                            name="multiStepsPass"
-                            class="form-control"
-                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                            aria-describedby="multiStepsPass2" />
-                          <span class="input-group-text cursor-pointer" id="multiStepsPass2"
-                            ><i class="ti ti-eye-off"></i
-                          ></span>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 form-password-toggle">
-                        <label class="form-label" for="multiStepsConfirmPass">تأكيد رمز الدخول</label>
-                        <div class="input-group input-group-merge">
-                          <input
-                            type="password"
-                            id="multiStepsConfirmPass"
-                            name="multiStepsConfirmPass"
-                            class="form-control"
-                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                            aria-describedby="multiStepsConfirmPass2" />
-                          <span class="input-group-text cursor-pointer" id="multiStepsConfirmPass2"
-                            ><i class="ti ti-eye-off"></i
-                          ></span>
-                        </div>
-                      </div>
-                          
                     
+                    <div class="d-flex align-items-center" style="min-height: 447px !important;">
+                      <div class="row g-3">
+
+
+                        <div class="col-sm-6">
+                          <label class="form-label" for="multiStepsEmail">البريد الإلكتروني</label>
+                          <input
+                            type="email"
+                            name="multiStepsEmail"
+                            id="multiStepsEmail"
+                            class="form-control"
+                            placeholder="john.doe@email.com"
+                            aria-label="john.doe" />
+                        </div>
+                        <div class="col-sm-6">
+                          <label class="form-label" for="multiStepsUsername">رقم التواصل</label>
+                          <input
+                            type="text"
+                            name="multiStepsUsername"
+                            id="multiStepsUsername"
+                            class="form-control"
+                            placeholder="0000 0000" />
+                        </div>
+                        
+                        <div class="col-sm-6 form-password-toggle">
+                          <label class="form-label" for="multiStepsPass">رمز الدخول</label>
+                          <div class="input-group input-group-merge">
+                            <input
+                              type="password"
+                              id="multiStepsPass"
+                              name="multiStepsPass"
+                              class="form-control"
+                              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                              aria-describedby="multiStepsPass2" />
+                            <span class="input-group-text cursor-pointer" id="multiStepsPass2"
+                              ><i class="ti ti-eye-off"></i
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 form-password-toggle">
+                          <label class="form-label" for="multiStepsConfirmPass">تأكيد رمز الدخول</label>
+                          <div class="input-group input-group-merge">
+                            <input
+                              type="password"
+                              id="multiStepsConfirmPass"
+                              name="multiStepsConfirmPass"
+                              class="form-control"
+                              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                              aria-describedby="multiStepsConfirmPass2" />
+                            <span class="input-group-text cursor-pointer" id="multiStepsConfirmPass2"
+                              ><i class="ti ti-eye-off"></i
+                            ></span>
+                          </div>
+                        </div>
+                            
+                      
+                        
+                      </div>
+                    </div>
+                      <div class="row g-3">
                       <div class="col-12 d-flex justify-content-between mt-4">
                         <button class="btn btn-label-secondary btn-prev" disabled>
                           <i class="ti ti-arrow-left ti-xs me-sm-1 me-0"></i>
@@ -200,6 +208,9 @@
                         </button>
                       </div>
                     </div>
+
+                      
+                    
                   </div>
                   <!-- Personal Info -->
                   <div id="personalInfoValidation" class="content">

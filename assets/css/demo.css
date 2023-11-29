@@ -329,3 +329,6 @@ td.text-truncate {
   display: none;
 }
 
+.light-style .auth-cover-bg-color {
+  background-color: rgba(177, 217, 231, 0.65) !important;
+}
